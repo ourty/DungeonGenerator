@@ -8,7 +8,7 @@ public class RoomClosed : MonoBehaviour
     private float rand;
     private bool insideExistingRoom = false;
     void Start(){
-        rand  = Random.Range(0.00f, 0.05f);
+        //rand  = Random.Range(0.00f, 0.05f);
     }
     void Update()
     {
@@ -23,10 +23,10 @@ public class RoomClosed : MonoBehaviour
         {
             insideExistingRoom = true;
         }
-        else if (hit.CompareTag("ClosedPoint"))
-        {
-            StartCoroutine(absorbSpawners(hit, rand));
-        }
+        // else if (hit.CompareTag("ClosedPoint"))
+        // {
+        //     StartCoroutine(absorbSpawners(hit, rand));
+        // }
     }
     IEnumerator absorbSpawners(Collider2D hit, float delay)
     {

@@ -23,7 +23,7 @@ public class RoomSpawner : MonoBehaviour
         activeSpawners = GameObject.Find("StartRoom").GetComponent<ActiveSpawners>();
         templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
         rand2 = Random.Range(0.00f, 0.1f);
-        StartCoroutine(nonAbsorbCheck());
+        //StartCoroutine(nonAbsorbCheck());
         activeSpawners.spawnerList.Add(this.gameObject);
     }
     void Update()
@@ -40,7 +40,7 @@ public class RoomSpawner : MonoBehaviour
         bool missingOpening;
         List<GameObject> tempRoomOptions;
         bool missingClosing;
-        if (!spawned)
+        //if (!spawned)
         {
             foreach (GameObject room in templates.allRooms)
             {
@@ -65,6 +65,12 @@ public class RoomSpawner : MonoBehaviour
                 if (missingClosing)
                     roomOptions.Remove(room);
             }
+            // string debug = "";
+            // foreach (GameObject room in roomOptions)
+            // {
+            //     debug = (debug + ", " + room.name);
+            // }
+            // Debug.Log(transform.position + " Room Options:" + debug + " room choosen:" + roomOptions[rand1].name);
             rand1 = Random.Range(0, roomOptions.Count);
             Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation);
             spawned = true;
@@ -72,17 +78,32 @@ public class RoomSpawner : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hit)
     {
-        //if (chosen)
-        //{
         if (hit.CompareTag("DataPoint"))
         {
             spawned = true;
         }
         else if (hit.CompareTag("SpawnPoint") || hit.CompareTag("ClosedPoint"))
         {
-            StartCoroutine(absorbSpawners(hit, rand2));
+            //StartCoroutine(absorbSpawners(hit, rand2));
+            if (hit.CompareTag("SpawnPoint"))
+            {
+                this.openingNeeded.AddRange(hit.GetComponent<RoomSpawner>().openingNeeded);
+                activeSpawners.spawnerList.Remove(hit.gameObject);
+            }
+            else if (hit.CompareTag("ClosedPoint"))
+            {
+                if (hit.CompareTag("ClosedPoint"))
+                {
+                    this.closingNeeded.AddRange(hit.GetComponent<RoomClosed>().closingNeeded);
+                }
+                // foreach (char closePoint in hit.GetComponent<RoomClosed>().closingNeeded)
+                // {
+                //     closingNeeded.Add(closePoint);
+                // }
+                //activeSpawners.spawnerList.Remove(hit.gameObject);
+            }
+            Destroy(hit.gameObject);
         }
-        //}
     }
     IEnumerator nonAbsorbCheck()
     {
