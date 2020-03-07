@@ -22,7 +22,7 @@ public class RoomSpawner : MonoBehaviour
     {
         activeSpawners = GameObject.Find("StartRoom").GetComponent<ActiveSpawners>();
         templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
-        rand2 = Random.Range(0.00f, 0.10f);
+        rand2 = Random.Range(0.00f, 0.1f);
         StartCoroutine(nonAbsorbCheck());
         activeSpawners.spawnerList.Add(this.gameObject);
     }
@@ -37,10 +37,10 @@ public class RoomSpawner : MonoBehaviour
     }
     public void Spawn()
     {
-        private bool missingOpening;
+        bool missingOpening;
         List<GameObject> tempRoomOptions;
-        private bool missingClosing;
-        if(!spawned)
+        bool missingClosing;
+        if (!spawned)
         {
             foreach (GameObject room in templates.allRooms)
             {
@@ -56,7 +56,7 @@ public class RoomSpawner : MonoBehaviour
             tempRoomOptions = new List<GameObject>(roomOptions);
             foreach (GameObject room in tempRoomOptions)
             {
-                bool missingClosing = false;
+                missingClosing = false;
                 foreach (char closing in closingNeeded)
                 {
                     if (room.name.IndexOf(closing) != -1)
