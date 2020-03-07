@@ -22,7 +22,7 @@ public class RoomSpawner : MonoBehaviour
     {
         activeSpawners = GameObject.Find("StartRoom").GetComponent<ActiveSpawners>();
         templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
-        rand2 = Random.Range(0.00f,0.10f);
+        rand2 = Random.Range(0.00f, 0.10f);
         StartCoroutine(nonAbsorbCheck());
         activeSpawners.spawnerList.Add(this.gameObject);
     }
@@ -37,73 +37,33 @@ public class RoomSpawner : MonoBehaviour
     }
     public void Spawn()
     {
+        private bool missingOpening;
+        List<GameObject> tempRoomOptions;
+        private bool missingClosing;
         if(!spawned)
         {
-            switch (openingNeeded.Count)
+            foreach (GameObject room in templates.allRooms)
             {
-                case 1:
-                    foreach (GameObject room in templates.allRooms)
-                    {
-                        if (room.name.IndexOf(openingNeeded[0]) != -1)
-                            roomOptions.Add(room);
-                    }
-                    break;
-                case 2:
-                    foreach (GameObject room in templates.allRooms)
-                    {
-                        if (room.name.IndexOf(openingNeeded[0]) != -1 && room.name.IndexOf(openingNeeded[1]) != -1)
-                            roomOptions.Add(room);
-                    }
-                    break;
-                case 3:
-                    foreach (GameObject room in templates.allRooms)
-                    {
-                        if (room.name.IndexOf(openingNeeded[0]) != -1 && room.name.IndexOf(openingNeeded[1]) != -1 && room.name.IndexOf(openingNeeded[2]) != -1)
-                            roomOptions.Add(room);
-                    }
-                    break;
-                case 4:
-                    foreach (GameObject room in templates.allRooms)
-                    {
-                        if (room.name.IndexOf(openingNeeded[0]) != -1 && room.name.IndexOf(openingNeeded[1]) != -1 && room.name.IndexOf(openingNeeded[2]) != -1 && room.name.IndexOf(openingNeeded[3]) != -1)
-                            roomOptions.Add(room);
-                    }
-                    break;
-            }
-            if (closingNeeded.Count != 0)
-            {
-                List<GameObject> tempRoomOptions = new List<GameObject>(roomOptions);
-                switch (closingNeeded.Count)
+                missingOpening = false;
+                foreach (char opening in openingNeeded)
                 {
-                    case 1:
-                        foreach (GameObject room in tempRoomOptions)
-                        {
-                            if (room.name.IndexOf(closingNeeded[0]) != -1)
-                                roomOptions.Remove(room);
-                        }
-                        break;
-                    case 2:
-                        foreach (GameObject room in tempRoomOptions)
-                        {
-                            if (room.name.IndexOf(closingNeeded[0]) != -1 && room.name.IndexOf(closingNeeded[1]) != -1)
-                                roomOptions.Remove(room);
-                        }
-                        break;
-                    case 3:
-                        foreach (GameObject room in tempRoomOptions)
-                        {
-                            if (room.name.IndexOf(closingNeeded[0]) != -1 && room.name.IndexOf(closingNeeded[1]) != -1 && room.name.IndexOf(closingNeeded[2]) != -1)
-                                roomOptions.Remove(room);
-                        }
-                        break;
-                    case 4:
-                        foreach (GameObject room in tempRoomOptions)
-                        {
-                            if (room.name.IndexOf(closingNeeded[0]) != -1 && room.name.IndexOf(closingNeeded[1]) != -1 && room.name.IndexOf(closingNeeded[2]) != -1 && room.name.IndexOf(closingNeeded[3]) != -1)
-                                roomOptions.Remove(room);
-                        }
-                        break;
+                    if (room.name.IndexOf(opening) == -1)
+                        missingOpening = true;
                 }
+                if (!missingOpening)
+                    roomOptions.Add(room);
+            }
+            tempRoomOptions = new List<GameObject>(roomOptions);
+            foreach (GameObject room in tempRoomOptions)
+            {
+                bool missingClosing = false;
+                foreach (char closing in closingNeeded)
+                {
+                    if (room.name.IndexOf(closing) != -1)
+                        missingClosing = true;
+                }
+                if (missingClosing)
+                    roomOptions.Remove(room);
             }
             rand1 = Random.Range(0, roomOptions.Count);
             Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation);
@@ -114,16 +74,18 @@ public class RoomSpawner : MonoBehaviour
     {
         //if (chosen)
         //{
-            if (hit.CompareTag("DataPoint"))
-            {
-                spawned = true;
-            }
-            else if(hit.CompareTag("SpawnPoint") || hit.CompareTag("ClosedPoint")){
-                StartCoroutine(absorbSpawners(hit,rand2));
-            }
+        if (hit.CompareTag("DataPoint"))
+        {
+            spawned = true;
+        }
+        else if (hit.CompareTag("SpawnPoint") || hit.CompareTag("ClosedPoint"))
+        {
+            StartCoroutine(absorbSpawners(hit, rand2));
+        }
         //}
     }
-    IEnumerator nonAbsorbCheck(){
+    IEnumerator nonAbsorbCheck()
+    {
         yield return new WaitForSeconds(0.4f);
         absorbed = true;
     }
