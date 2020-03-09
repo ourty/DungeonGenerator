@@ -9,7 +9,6 @@ public class RoomSpawner : MonoBehaviour
     private List<Collider2D> collidingList = new List<Collider2D>();
     private RoomTemplates templates;
     private int rand1;
-    private float rand2;
     private bool spawned = false;
     private ActiveSpawners activeSpawners;
     private List<GameObject> roomOptions = new List<GameObject>();
@@ -18,8 +17,6 @@ public class RoomSpawner : MonoBehaviour
     {
         activeSpawners = GameObject.Find("StartRoom").GetComponent<ActiveSpawners>();
         templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
-        rand2 = Random.Range(0.00f, 0.1f);
-        //StartCoroutine(nonAbsorbCheck());
         activeSpawners.spawnerList.Add(this.gameObject);
     }
     void Update()
