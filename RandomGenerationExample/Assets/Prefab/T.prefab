@@ -397,8 +397,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &923682021508482324
 GameObject:
@@ -733,8 +733,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1664478334495181500
 GameObject:
@@ -1861,8 +1861,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &5945899854156543386
 GameObject:
@@ -2585,7 +2585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 
   closingNeeded: 
-  absorbed: 0
 --- !u!50 &4034067159122855123
 Rigidbody2D:
   serializedVersion: 4

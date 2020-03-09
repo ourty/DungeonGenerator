@@ -11,13 +11,9 @@ public class RoomSpawner : MonoBehaviour
     private int rand1;
     private float rand2;
     private bool spawned = false;
-    //public bool chosen = false;
-    public bool absorbed = false;
-    private Coroutine waiting;
     private ActiveSpawners activeSpawners;
     private List<GameObject> roomOptions = new List<GameObject>();
 
-    //called on start
     void Awake()
     {
         activeSpawners = GameObject.Find("StartRoom").GetComponent<ActiveSpawners>();
@@ -31,16 +27,38 @@ public class RoomSpawner : MonoBehaviour
         if (spawned)
         {
             activeSpawners.spawnerList.Remove(this.gameObject);
-            //activeSpawners.spawning = false;
+            activeSpawners.spawning = false;
             Destroy(this.gameObject);
         }
     }
     public void Spawn()
     {
+        if (collidingList.Count != 0)
+        {
+            for (int i = collidingList.Count - 1; i >= 0; i--)
+            {
+                if (collidingList[i].CompareTag("SpawnPoint") || collidingList[i].CompareTag("ClosedPoint"))
+                {
+                    //StartCoroutine(absorbSpawners(hit, rand2));
+                    if (collidingList[i].CompareTag("SpawnPoint"))
+                    {
+                        this.openingNeeded.AddRange(collidingList[i].GetComponent<RoomSpawner>().openingNeeded);
+                        activeSpawners.spawnerList.Remove(collidingList[i].gameObject);
+                    }
+                    else if (collidingList[i].CompareTag("ClosedPoint"))
+                    {
+                        if (collidingList[i].CompareTag("ClosedPoint"))
+                        {
+                            this.closingNeeded.AddRange(collidingList[i].GetComponent<RoomClosed>().closingNeeded);
+                        }
+                    }
+                    Destroy(collidingList[i].gameObject);
+                }
+            }
+        }
         bool missingOpening;
         List<GameObject> tempRoomOptions;
         bool missingClosing;
-        //if (!spawned)
         {
             foreach (GameObject room in templates.allRooms)
             {
@@ -65,12 +83,6 @@ public class RoomSpawner : MonoBehaviour
                 if (missingClosing)
                     roomOptions.Remove(room);
             }
-            // string debug = "";
-            // foreach (GameObject room in roomOptions)
-            // {
-            //     debug = (debug + ", " + room.name);
-            // }
-            // Debug.Log(transform.position + " Room Options:" + debug + " room choosen:" + roomOptions[rand1].name);
             rand1 = Random.Range(0, roomOptions.Count);
             Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation);
             spawned = true;
@@ -84,50 +96,8 @@ public class RoomSpawner : MonoBehaviour
         }
         else if (hit.CompareTag("SpawnPoint") || hit.CompareTag("ClosedPoint"))
         {
-            //StartCoroutine(absorbSpawners(hit, rand2));
-            if (hit.CompareTag("SpawnPoint"))
-            {
-                this.openingNeeded.AddRange(hit.GetComponent<RoomSpawner>().openingNeeded);
-                activeSpawners.spawnerList.Remove(hit.gameObject);
-            }
-            else if (hit.CompareTag("ClosedPoint"))
-            {
-                if (hit.CompareTag("ClosedPoint"))
-                {
-                    this.closingNeeded.AddRange(hit.GetComponent<RoomClosed>().closingNeeded);
-                }
-                // foreach (char closePoint in hit.GetComponent<RoomClosed>().closingNeeded)
-                // {
-                //     closingNeeded.Add(closePoint);
-                // }
-                //activeSpawners.spawnerList.Remove(hit.gameObject);
-            }
-            Destroy(hit.gameObject);
+            collidingList.Add(hit);
         }
-    }
-    IEnumerator nonAbsorbCheck()
-    {
-        yield return new WaitForSeconds(0.4f);
-        absorbed = true;
-    }
-    IEnumerator absorbSpawners(Collider2D hit, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        if (hit.CompareTag("SpawnPoint"))
-        {
-            this.openingNeeded.AddRange(hit.GetComponent<RoomSpawner>().openingNeeded);
-            activeSpawners.spawnerList.Remove(hit.gameObject);
-        }
-        else if (hit.CompareTag("ClosedPoint"))
-        {
-            foreach (char closePoint in hit.GetComponent<RoomClosed>().closingNeeded)
-            {
-                closingNeeded.Add(closePoint);
-            }
-            //activeSpawners.spawnerList.Remove(hit.gameObject);
-        }
-        Destroy(hit.gameObject);
-        //StopCoroutine(waiting);
-        //waiting = StartCoroutine(nonAbsorbCheck());
+
     }
 }

@@ -5,40 +5,24 @@ using UnityEngine;
 public class ActiveSpawners : MonoBehaviour
 {
     public List<GameObject> spawnerList = new List<GameObject>();
-    private GameObject chosenSpawner;
+    public bool spawning = false;
     private int rand;
-    //public bool spawning = false;
-    private bool allSpawnersCondensed = true;
 
-    void Update()
+    private void FixedUpdate()
     {
-        // if (!IsInvoking("InvokeSpawn"))
-        //     foreach (GameObject spawner in spawnerList)
-        //     {
-        //         allSpawnersCondensed = true;
-        //         if (!spawner.GetComponent<RoomSpawner>().absorbed)
-        //         {
-        //             allSpawnersCondensed = false;
-        //         }
-        //     }
-        if (spawnerList.Count != 0 && allSpawnersCondensed && !IsInvoking("InvokeSpawn"))
+        if (spawnerList.Count != 0 && !spawning)
         {
-            rand = Random.Range(0, spawnerList.Count);//moved
-            // rand = Random.Range(0, spawnerList.Count);
-            chosenSpawner = spawnerList[rand];
-            chosenSpawner.GetComponent<RoomSpawner>().enabled = true;
-            // spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
-            Invoke("InvokeSpawn", 0.3f);
+            spawning = true;
+            Invoke("InvokeSpawn", 0.1f);
         }
     }
 
     void InvokeSpawn()
     {
-        if (spawnerList.Count != 0 && chosenSpawner)
+        if (spawnerList.Count != 0)
         {
-            //moved
-            //if (spawnerList[rand].GetComponent<RoomSpawner>().absorbed)
-                chosenSpawner.GetComponent<RoomSpawner>().Spawn();
+            rand = Random.Range(0, spawnerList.Count);
+            spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
         }
     }
     // IEnumerator generate(float time){
