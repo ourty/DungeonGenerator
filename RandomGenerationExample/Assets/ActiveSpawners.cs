@@ -5,29 +5,18 @@ using UnityEngine;
 public class ActiveSpawners : MonoBehaviour
 {
     public List<GameObject> spawnerList = new List<GameObject>();
+    public bool spawning = false;
     private int rand;
-    //public bool spawning = false;
-    private bool allSpawnersCondensed = true;
+    //this will also keep track of all existing rooms
+    public int roomCount = 1;//this should be set to 1 by default as to account for the starting room
+    public int maxRooms;
 
-    void Update()
+    private void FixedUpdate()
     {
-        if (!IsInvoking("InvokeSpawn"))
-            foreach (GameObject spawner in spawnerList)
-            {
-                allSpawnersCondensed = true;
-                if (!spawner.GetComponent<RoomSpawner>().absorbed)
-                {
-                    allSpawnersCondensed = false;
-                }
-            }
-        if (spawnerList.Count != 0 && allSpawnersCondensed && !IsInvoking("InvokeSpawn"))
+        if (spawnerList.Count != 0 && !spawning)
         {
-
-            //spawning = true;
-            Invoke("InvokeSpawn", 0.41f);
-            // rand = Random.Range(0, spawnerList.Count);
-            // spawnerList[rand].GetComponent<RoomSpawner>().chosen = true;
-            // spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
+            spawning = true;
+            Invoke("InvokeSpawn", 0.1f);
         }
     }
 
@@ -36,7 +25,6 @@ public class ActiveSpawners : MonoBehaviour
         if (spawnerList.Count != 0)
         {
             rand = Random.Range(0, spawnerList.Count);
-            if(spawnerList[rand].GetComponent<RoomSpawner>().absorbed)
             spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
         }
     }

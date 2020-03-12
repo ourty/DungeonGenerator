@@ -726,7 +726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &5558144401843640765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1188,8 +1187,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &3038504317343960613
 GameObject:
@@ -2269,8 +2268,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &5291404123391784648
 GameObject:
@@ -2445,6 +2444,7 @@ GameObject:
   - component: {fileID: 5825574079325671176}
   - component: {fileID: 2141548575652547269}
   - component: {fileID: 5832461156613741433}
+  - component: {fileID: 1487793653168516114}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -2513,6 +2513,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1487793653168516114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623927709015174002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 4200
 --- !u!1 &5688233102769946925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,8 +3055,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &9003083993488701503
 GameObject:

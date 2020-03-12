@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5126896168039292536, guid: fb4f163d4e92c384eb2cb2c385dc26d8,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7383952980579254762, guid: fb4f163d4e92c384eb2cb2c385dc26d8,
         type: 3}
       propertyPath: m_Name
@@ -209,6 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnerList: []
+  spawning: 0
+  roomCount: 1
+  maxRooms: 5
 --- !u!1 &727423523
 GameObject:
   m_ObjectHideFlags: 0

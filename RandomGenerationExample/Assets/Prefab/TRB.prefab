@@ -414,8 +414,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1218032115807766540
 GameObject:
@@ -1076,6 +1076,7 @@ GameObject:
   - component: {fileID: 1185361803352533008}
   - component: {fileID: 2014151576222873990}
   - component: {fileID: 7130796523789860238}
+  - component: {fileID: 6774626813466812413}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -1144,6 +1145,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6774626813466812413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185591057025874007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 540052004200
 --- !u!1 &2508495840576745018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 4c00
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &7701914247625827387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1236,8 +1249,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &2639689557808198834
 GameObject:
@@ -1737,7 +1750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 5400
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &8243544376963995255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1782,8 +1794,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &4504211350167282234
 GameObject:
@@ -2156,7 +2168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 4200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &8678304745535200715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2201,8 +2212,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &6129394627973080247
 GameObject:

@@ -674,7 +674,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 4c00
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &6698474967549646012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -719,8 +718,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &2732766395140976797
 GameObject:
@@ -1093,7 +1092,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 5200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &1242264233808944176
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1138,8 +1136,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &4566192644956473271
 GameObject:
@@ -2025,8 +2023,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &7305403373342400541
 GameObject:
@@ -2480,7 +2478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 5400
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &6032338864099229157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2525,8 +2522,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &8117656253047434273
 GameObject:
@@ -2815,6 +2812,7 @@ GameObject:
   - component: {fileID: 7723115383432264717}
   - component: {fileID: 1157059334518915618}
   - component: {fileID: 116521612617520672}
+  - component: {fileID: 6595852870941227144}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -2883,6 +2881,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6595852870941227144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955979249363489677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 4c0052004200
 --- !u!1 &9170322148768992828
 GameObject:
   m_ObjectHideFlags: 0
