@@ -7,6 +7,9 @@ public class ActiveSpawners : MonoBehaviour
     public List<GameObject> spawnerList = new List<GameObject>();
     public bool spawning = false;
     private int rand;
+    //this will also keep track of all existing rooms
+    public int roomCount = 1;//this should be set to 1 by default as to account for the starting room
+    public int maxRooms;
 
     private void FixedUpdate()
     {

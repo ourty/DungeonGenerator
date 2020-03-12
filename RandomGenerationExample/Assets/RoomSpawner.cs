@@ -80,8 +80,23 @@ public class RoomSpawner : MonoBehaviour
                 if (missingClosing)
                     roomOptions.Remove(room);
             }
+            int potentialAndExistingRooms = activeSpawners.roomCount + activeSpawners.spawnerList.Count;
+            if ((activeSpawners.maxRooms - potentialAndExistingRooms) < 3)
+            {
+                if (((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count) < 4) //this if statement may be extra and uneeded
+                {
+                    tempRoomOptions = new List<GameObject>(roomOptions);
+                    foreach (GameObject room in tempRoomOptions)
+                    {
+                        string name = room.name;
+                        if (name.Length > ((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count))
+                            roomOptions.Remove(room);
+                    }
+                }
+            }
             rand1 = Random.Range(0, roomOptions.Count);
             Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation);
+            activeSpawners.roomCount++;
             spawned = true;
         }
     }

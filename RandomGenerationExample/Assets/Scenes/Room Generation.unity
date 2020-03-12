@@ -214,6 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnerList: []
+  spawning: 0
+  roomCount: 1
+  maxRooms: 5
 --- !u!1 &727423523
 GameObject:
   m_ObjectHideFlags: 0

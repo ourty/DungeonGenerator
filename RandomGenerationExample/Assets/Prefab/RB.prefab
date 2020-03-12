@@ -2801,6 +2801,7 @@ GameObject:
   - component: {fileID: 7633933612570558408}
   - component: {fileID: 1249653973805136694}
   - component: {fileID: 8119910195144590959}
+  - component: {fileID: 2235993921495224757}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -2869,6 +2870,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2235993921495224757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6673677881569622526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 52004200
 --- !u!1 &7121163560607177969
 GameObject:
   m_ObjectHideFlags: 0
