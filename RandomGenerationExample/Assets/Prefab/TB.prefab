@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 3621594651814594993}
   - component: {fileID: 7305934766012124977}
   - component: {fileID: 3557477892737971280}
+  - component: {fileID: 4008796203149314880}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -160,6 +161,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4008796203149314880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470293030544250254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 54004200
 --- !u!1 &670655286033308215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,8 +1281,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &4958256055435153409
 GameObject:
@@ -1360,8 +1374,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &5035703446029972415
 GameObject:
@@ -1889,14 +1903,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5860868150100950875}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eddc165d014e56c4f8144f6a8e8e287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openingNeeded: 4200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &2607132355985603964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1941,8 +1954,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &6407727632504719398
 GameObject:
@@ -2666,14 +2679,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7283312399796772554}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eddc165d014e56c4f8144f6a8e8e287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openingNeeded: 5400
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &7985002459110818991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2718,8 +2730,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &7662383357409032344
 GameObject:

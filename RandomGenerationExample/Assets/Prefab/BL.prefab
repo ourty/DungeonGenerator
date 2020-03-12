@@ -121,14 +121,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004673538290361899}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eddc165d014e56c4f8144f6a8e8e287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openingNeeded: 5400
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &5608142977580576183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -173,8 +172,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1010054677479070624
 GameObject:
@@ -1822,8 +1821,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &6021460704826148018
 GameObject:
@@ -2108,14 +2107,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7145735186797475578}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eddc165d014e56c4f8144f6a8e8e287a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openingNeeded: 5200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &864479748969928640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2160,8 +2158,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &7550577240256925964
 GameObject:
@@ -2336,6 +2334,7 @@ GameObject:
   - component: {fileID: 394219290932209843}
   - component: {fileID: 283487222623949010}
   - component: {fileID: 4829985833888263461}
+  - component: {fileID: 7575669209704427785}
   m_Layer: 0
   m_Name: roomData
   m_TagString: DataPoint
@@ -2404,6 +2403,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7575669209704427785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596065021232422091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Openings: 4c004200
 --- !u!1 &7706787402225056811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,8 +2811,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &8028316046833247617
 GameObject:

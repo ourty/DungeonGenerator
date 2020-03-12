@@ -252,8 +252,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &1719951734295357443
 GameObject:
@@ -588,8 +588,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &3084958547594689741
 GameObject:
@@ -638,7 +638,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 4200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &1565172355537352683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -776,8 +775,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &3098202117053239039
 GameObject:
@@ -826,7 +825,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 5200
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &1129558312780938423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -964,8 +962,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &3784047486869688866
 GameObject:
@@ -3126,7 +3124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 5400
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &4656047794173149062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3707,7 +3704,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingNeeded: 4c00
   closingNeeded: 
-  absorbed: 0
 --- !u!61 &8786685942110173098
 BoxCollider2D:
   m_ObjectHideFlags: 0

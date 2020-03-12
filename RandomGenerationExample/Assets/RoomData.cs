@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomDataArray : MonoBehaviour
+public class RoomData : MonoBehaviour
 {
-    public int[] Data;
+    public char[] Openings;
 }
