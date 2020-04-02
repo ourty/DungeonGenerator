@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActiveSpawners : MonoBehaviour
 {
+    public GameObject loadingScreen;//remove loading screen once floor generation is finished.
     public List<GameObject> spawnerList = new List<GameObject>();
     public bool spawning = false;
     private int rand;
@@ -24,6 +25,9 @@ public class ActiveSpawners : MonoBehaviour
             spawning = true;
             Invoke("InvokeSpawn", 0.1f);
         }
+        if(spawnerList.Count == 0){
+            Invoke("EndLoadingScreen",0.2f);
+        }
     }
 
     void InvokeSpawn()
@@ -34,10 +38,8 @@ public class ActiveSpawners : MonoBehaviour
             spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
         }
     }
-    // IEnumerator generate(float time){
-    //     rand = Random.Range(0, spawnerList.Count-1);
-    //     spawnerList[rand].GetComponent<roomSpawner>().Spawn();
-    //     yield return new WaitForSeconds(time+0.1f);
-    // }
+    void EndLoadingScreen(){
+        loadingScreen.SetActive(false);
+    }
 }
 

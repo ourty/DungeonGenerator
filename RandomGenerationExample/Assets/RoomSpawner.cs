@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
 {
+    GameObject[] tempFind;
     public List<char> openingNeeded = new List<char>();
     public List<char> closingNeeded = new List<char>();
     private List<Collider2D> collidingList = new List<Collider2D>();
@@ -16,7 +17,12 @@ public class RoomSpawner : MonoBehaviour
     void Awake()
     {
         activeSpawners = GameObject.Find("/MiniMap/FloorGeneration/StartRoom").GetComponent<ActiveSpawners>();
-        templates = GameObject.FindGameObjectWithTag("Templates").GetComponent<RoomTemplates>();
+        tempFind = GameObject.FindGameObjectsWithTag("Templates");
+        foreach (GameObject template in tempFind)
+        {
+            if (template.name == "roomNodeTemplates")
+                templates = template.GetComponent<RoomTemplates>();
+        }
         activeSpawners.spawnerList.Add(this.gameObject);
     }
     void Update()
@@ -95,7 +101,7 @@ public class RoomSpawner : MonoBehaviour
                 }
             }
             rand1 = Random.Range(0, roomOptions.Count);
-            Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation);
+            Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation, gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent);
             activeSpawners.roomCount++;
             spawned = true;
         }
