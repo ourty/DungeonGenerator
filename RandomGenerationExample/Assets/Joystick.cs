@@ -9,9 +9,11 @@ public class Joystick : MonoBehaviour
     private bool touchStart = false;
     private Vector2 pointA;
     private Vector2 pointB;
-
+    private bool moving = false;
     public Transform innerCircle;
     public Transform outerCircle;
+    public Rigidbody2D rb;
+    Vector2 direction = new Vector2(0f,0f);
 
     // Update is called once per frame
     void Update()
@@ -37,20 +39,29 @@ public class Joystick : MonoBehaviour
         if (touchStart)
         {
             Vector2 offset = pointB - pointA;
-            Vector2 direction = Vector2.ClampMagnitude(offset, 9.0f);
+            direction = Vector2.ClampMagnitude(offset, 9.0f);
             //Debug.Log(offset.normalized + " " + offset.x + " " + offset.y);
-            moveCharacter(direction.normalized);
-
+            moving = true;
             innerCircle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y);
         }
         else
         {
+            moving = false;
+            direction = new Vector2(0f,0f);
             innerCircle.GetComponent<SpriteRenderer>().enabled = false;
             outerCircle.GetComponent<SpriteRenderer>().enabled = false;
         }
+        move();
+    }
+    private void FixedUpdate() {
+        if(moving)
+            moveCharacter(direction.normalized);
     }
     void moveCharacter(Vector2 direction)
     {
         player.Translate(direction * speed * Time.deltaTime);
+    }
+    void move(){
+        rb.velocity = new Vector2(direction.normalized.x, direction.normalized.y);
     }
 }
