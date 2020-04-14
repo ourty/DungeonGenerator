@@ -22,19 +22,19 @@ public class RoomData : MonoBehaviour
         {
             if (door == 'T')
             {
-                Instantiate(doorTemplates.allDoors[0], gameObject.transform.GetChild(2).transform);
+                Instantiate(doorTemplates.allDoors[0], gameObject.transform.GetChild(1).transform);
             }
             if (door == 'R')
             {
-                Instantiate(doorTemplates.allDoors[1], gameObject.transform.GetChild(2).transform);
+                Instantiate(doorTemplates.allDoors[1], gameObject.transform.GetChild(1).transform);
             }
             if (door == 'B')
             {
-                Instantiate(doorTemplates.allDoors[2], gameObject.transform.GetChild(2).transform);
+                Instantiate(doorTemplates.allDoors[2], gameObject.transform.GetChild(1).transform);
             }
             if (door == 'L')
             {
-                Instantiate(doorTemplates.allDoors[3], gameObject.transform.GetChild(2).transform);
+                Instantiate(doorTemplates.allDoors[3], gameObject.transform.GetChild(1).transform);
             }
         }
     }
