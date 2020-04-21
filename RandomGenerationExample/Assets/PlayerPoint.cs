@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPoint : MonoBehaviour
 {
-    public Transform parent;
+    Transform floorRoomParent;
     int rand;
     GameObject[] tempFind;
     RoomTemplates templates;
@@ -22,7 +22,13 @@ public class PlayerPoint : MonoBehaviour
             if (template.name == "roomStructureTemplates")
                 templates = template.GetComponent<RoomTemplates>();
         }
-        activeSpawners = GameObject.Find("/MiniMap/FloorGeneration/StartRoom").GetComponent<ActiveSpawners>();
+        //activeSpawners = GameObject.Find("/MiniMap/FloorGeneration(Clone)/StartRoom").GetComponent<ActiveSpawners>();
+        tempFind = GameObject.FindGameObjectsWithTag("RootObjects");
+        foreach (GameObject root in tempFind)
+        {
+            if (root.name == "Floor1Rooms(Clone)")
+                floorRoomParent = root.transform;
+        }
     }
 
     // Update is called once per frame
@@ -38,14 +44,14 @@ public class PlayerPoint : MonoBehaviour
             if (!startRoomInstantiated)
             {
                 rand = Random.Range(0, templates.allRooms.Length);
-                rnData.connectedRoom = Instantiate(templates.allRooms[rand], new Vector3(0f, 0f, 0f), templates.allRooms[rand].transform.rotation, parent) as GameObject;
+                rnData.connectedRoom = Instantiate(templates.allRooms[rand], new Vector3(0f, 0f, 0f), templates.allRooms[rand].transform.rotation, floorRoomParent) as GameObject;
                 rnData.roomInstatiated = true;
                 startRoomInstantiated = true;
             }
             else if (!rnData.roomInstatiated)
             {
                 rand = Random.Range(0, templates.allRooms.Length);
-                rnData.connectedRoom = Instantiate(templates.allRooms[rand], currPos, templates.allRooms[rand].transform.rotation, parent) as GameObject;
+                rnData.connectedRoom = Instantiate(templates.allRooms[rand], currPos, templates.allRooms[rand].transform.rotation, floorRoomParent) as GameObject;
                 rnData.roomInstatiated = true;
             }
         }

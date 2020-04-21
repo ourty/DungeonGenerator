@@ -16,7 +16,7 @@ public class RoomSpawner : MonoBehaviour
 
     void Awake()
     {
-        activeSpawners = GameObject.Find("/MiniMap/FloorGeneration/StartRoom").GetComponent<ActiveSpawners>();
+        activeSpawners = GameObject.Find("/MiniMap/FloorGeneration(Clone)/StartRoom").GetComponent<ActiveSpawners>();
         tempFind = GameObject.FindGameObjectsWithTag("Templates");
         foreach (GameObject template in tempFind)
         {

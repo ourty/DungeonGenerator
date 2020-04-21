@@ -9,6 +9,7 @@ TagManager:
   - DataPoint
   - ClosedPoint
   - PlayerPoint
+  - RootObjects
   layers:
   - Default
   - TransparentFX

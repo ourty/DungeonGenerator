@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ActiveSpawners : MonoBehaviour
 {
-    public GameObject loadingScreen;//remove loading screen once floor generation is finished.
     public List<GameObject> spawnerList = new List<GameObject>();
     public bool spawning = false;
     private int rand;
@@ -42,7 +41,7 @@ public class ActiveSpawners : MonoBehaviour
     }
     void EndLoadingScreen()
     {
-        loadingScreen.SetActive(false);
+        EventManager.current.DoneLoading();
     }
 }
 

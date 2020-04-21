@@ -19,4 +19,44 @@ public class EventManager : MonoBehaviour
             onFloorGeneration();
         }
     }
+    public event Action onDoneLoading;
+    public void DoneLoading()
+    {
+        if (onDoneLoading != null)
+        {
+            onDoneLoading();
+        }
+    }
+    public event Action onStartLoading;
+    public void StartLoading()
+    {
+        if (onStartLoading != null)
+        {
+            onStartLoading();
+        }
+    }
+    public event Action onGameRunStart;
+    public void GameRunStart()
+    {
+        if (onGameRunStart != null)
+        {
+            onGameRunStart();
+        }
+    }
+    public event Action onGameRunEnd;
+    public void GameRunEnd()
+    {
+        if (onGameRunEnd != null)
+        {
+            onGameRunEnd();
+        }
+    }
+    public event Action onFloorRoomSpawn;
+    public void FloorRoomSpawn()
+    {
+        if (onFloorRoomSpawn != null)
+        {
+            onFloorRoomSpawn();
+        }
+    }
 }
