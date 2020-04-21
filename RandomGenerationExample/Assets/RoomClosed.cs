@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class RoomClosed : MonoBehaviour
 {
     public List<char> closingNeeded = new List<char>();

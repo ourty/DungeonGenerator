@@ -8,6 +8,7 @@ TagManager:
   - Templates
   - DataPoint
   - ClosedPoint
+  - PlayerPoint
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - MiniMap
+  - Game
   - 
   - 
   - 
@@ -44,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Rooms
+    uniqueID: 1888438759
+    locked: 0
+  - name: MiniMap
+    uniqueID: 3348678807
+    locked: 0
+  - name: UI
+    uniqueID: 1502399557
     locked: 0

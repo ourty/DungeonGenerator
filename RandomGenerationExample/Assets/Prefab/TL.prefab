@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 295073788906370831}
   - component: {fileID: 5411641269076415662}
   - component: {fileID: 2448375410647173577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: point (1)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8928119211748958282}
   - component: {fileID: 3429284552007663178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,9 +161,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814017461308554873}
   - component: {fileID: 527188191644399227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,9 +242,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872810029728288952}
   - component: {fileID: 683907472639386396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,9 +323,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092485701076450325}
   - component: {fileID: 8793575586653266790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,9 +404,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -428,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7557767343181297436}
   - component: {fileID: 7726155750656894978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,9 +485,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 4970205238757148668}
   - component: {fileID: 3802555909573675635}
   - component: {fileID: 9041469548658372818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: point
   m_TagString: SpawnPoint
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -603,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789064282530159395}
   - component: {fileID: 5993642745214938451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,9 +660,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -684,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6817932860498031865}
   - component: {fileID: 160796694049588792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,9 +741,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -764,7 +764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2404524008012103387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: closedPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4536444339586354302}
   - component: {fileID: 3242512699306376645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -854,9 +854,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 751172311413884066}
   - component: {fileID: 449321821861061544}
   - component: {fileID: 1316909799093720706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: point (2)
   m_TagString: ClosedPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -971,7 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5104653253558574203}
   - component: {fileID: 4268923146060952516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,9 +1028,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1052,7 +1052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5908715087881125602}
   - component: {fileID: 6684421844668359838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,9 +1109,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1132,7 +1132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 342153410702968197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6707178792506394107}
   - component: {fileID: 4131646182911505048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,9 +1252,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1276,7 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4766873667512056900}
   - component: {fileID: 6274863049728008384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,9 +1333,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1357,7 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167199286708422257}
   - component: {fileID: 7742118645005596963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1414,9 +1414,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1438,7 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7341779314365253968}
   - component: {fileID: 9061711787142497742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,9 +1495,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1519,7 +1519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886455659822661153}
   - component: {fileID: 4730896033983532569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,9 +1576,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 3302426603236039929}
   - component: {fileID: 4650398883358941675}
   - component: {fileID: 8807334742515329988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: roomData
   m_TagString: DataPoint
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -1682,6 +1682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomInstatiated: 0
+  connectedRoom: {fileID: 0}
   Openings: 54004c00
 --- !u!1 &2946856146246685790
 GameObject:
@@ -1693,7 +1695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5328604705049766804}
   - component: {fileID: 4800846796220838807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,9 +1752,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1774,7 +1776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7512790179368336834}
   - component: {fileID: 737112286975905226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,9 +1833,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1855,7 +1857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3598773733343478581}
   - component: {fileID: 4084475652224033438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,9 +1914,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1935,7 +1937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881228567406187374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: roomSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,7 +1970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6295614571448904484}
   - component: {fileID: 8688826466345245538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2025,9 +2027,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2049,7 +2051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8881628824012642199}
   - component: {fileID: 6610845866298012306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,9 +2108,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2130,7 +2132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953105350780099173}
   - component: {fileID: 6118705019536992040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2187,9 +2189,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2211,7 +2213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7036272138789888670}
   - component: {fileID: 116885908993795790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2268,9 +2270,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2292,7 +2294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532033523414014343}
   - component: {fileID: 6504409146060969717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2349,9 +2351,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2373,7 +2375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5671465543559350920}
   - component: {fileID: 1564128334399094544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2430,9 +2432,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2454,7 +2456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92307204844217832}
   - component: {fileID: 5459455324082272680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2511,9 +2513,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2535,7 +2537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6528888191305360107}
   - component: {fileID: 4396310255152702809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2592,9 +2594,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2615,7 +2617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522780521831610492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2650,7 +2652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3686087475075953865}
   - component: {fileID: 5273310747423667042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,9 +2709,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2731,7 +2733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5948576172198724583}
   - component: {fileID: 4664582638724119273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2788,9 +2790,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2812,7 +2814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7741503383993401564}
   - component: {fileID: 4560732875816660666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,9 +2871,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2895,7 +2897,7 @@ GameObject:
   - component: {fileID: 9143937195087554381}
   - component: {fileID: 3334283384081336836}
   - component: {fileID: 2360388425713567006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: point (4)
   m_TagString: ClosedPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -2986,7 +2988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5550961590127600666}
   - component: {fileID: 7210752447511985562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3043,9 +3045,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3067,7 +3069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5166184633527438692}
   - component: {fileID: 4750648749714548257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3124,9 +3126,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3148,7 +3150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3743402216276338942}
   - component: {fileID: 7940338606320483244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3205,9 +3207,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -946288489
+  m_SortingLayer: 2
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: e55d0b93c8aacb14fad947135ce9a044, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
