@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4743630868183808309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867860, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867861, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.09900004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867861, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867861, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.23603232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867862, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: health
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867862, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: startTimeBtwShots
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464938642078867862, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2748101176180531602, guid: 0cbd7f920ab82478ab0461967f00574c,
+        type: 3}
+    - target: {fileID: 4464938642078867865, guid: 1aed8980467fc43e997676b0b746579b,
+        type: 3}
+      propertyPath: m_Name
+      value: Totem (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1aed8980467fc43e997676b0b746579b, type: 3}
