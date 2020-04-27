@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8626896531486270992}
   - component: {fileID: 8626896531486270993}
   - component: {fileID: 8626896531486270994}
+  - component: {fileID: 2885517044285725346}
   m_Layer: 8
   m_Name: Skelly
   m_TagString: Enemy
@@ -73,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2192450021786810173, guid: e79f5ff1344d44ee3a81e0b2efcfd0d7,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: c19f1d60025dc5444ae99858fd829e6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.12, y: 0.28}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.12, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -156,3 +156,23 @@ MonoBehaviour:
   isFlipped: 1
   xplosion: {fileID: 1150530381809825631, guid: db762789a7542499eb7e933e182bbd2b,
     type: 3}
+  animator: {fileID: 0}
+--- !u!95 &2885517044285725346
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626896531486270995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ce10a448a11f444d8de9a4d2402c01b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

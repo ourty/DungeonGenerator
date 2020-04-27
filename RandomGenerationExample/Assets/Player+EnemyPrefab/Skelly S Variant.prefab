@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8626896531486270992, guid: 2537b431460d94cd8b95e306a1111d81,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626896531486270992, guid: 2537b431460d94cd8b95e306a1111d81,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.37
+      objectReference: {fileID: 0}
     - target: {fileID: 8626896531486270994, guid: 2537b431460d94cd8b95e306a1111d81,
         type: 3}
       propertyPath: stoppingDistance
@@ -35,7 +45,7 @@ PrefabInstance:
     - target: {fileID: 8626896531486270995, guid: 2537b431460d94cd8b95e306a1111d81,
         type: 3}
       propertyPath: m_Name
-      value: Skelly (1)
+      value: Skelly S Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8626896531486270998, guid: 2537b431460d94cd8b95e306a1111d81,
         type: 3}
@@ -107,5 +117,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8626896531486270999, guid: 2537b431460d94cd8b95e306a1111d81,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dea6c88e9d8236a479fdc56b405564a9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2537b431460d94cd8b95e306a1111d81, type: 3}

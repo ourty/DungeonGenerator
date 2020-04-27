@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
     public bool isFlipped = false;
     public GameObject xplosion;
 
+    //Animator
+    public Animator animator;
+
     void Start()
     {
        player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -26,6 +29,9 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
+        //Animation 
+        animator.SetFloat("Speed",transform.position.x);
+
         //Will be always facing player and some enemies distance themselves.
         LookPlayer();
         if( Vector2.Distance(transform.position, player.position) > stoppingDistance)
