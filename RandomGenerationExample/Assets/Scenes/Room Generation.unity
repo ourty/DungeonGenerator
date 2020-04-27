@@ -1270,7 +1270,7 @@ RectTransform:
   m_GameObject: {fileID: 416414584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.925, z: 1}
   m_Children: []
   m_Father: {fileID: 1141703287}
   m_RootOrder: 0
@@ -1743,6 +1743,7 @@ GameObject:
   - component: {fileID: 863480166}
   - component: {fileID: 863480165}
   - component: {fileID: 863480164}
+  - component: {fileID: 863480168}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1822,14 +1823,27 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1141703287}
-  m_Father: {fileID: 1593490070}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &863480168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863480163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a6acf345b0ff640ab65447557d75f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1141703286}
 --- !u!1 &939471826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2789,7 @@ GameObject:
   - component: {fileID: 1388449742}
   - component: {fileID: 1388449741}
   - component: {fileID: 1388449740}
+  - component: {fileID: 1388449743}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2798,7 +2813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 510, y: 275}
+  m_AnchoredPosition: {x: 402, y: 213}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388449740
@@ -2843,7 +2858,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1388449741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1388449743}
+        m_MethodName: pausemenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1388449741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,6 +2906,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388449738}
   m_CullTransparentMesh: 0
+--- !u!114 &1388449743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388449738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a6acf345b0ff640ab65447557d75f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1141703286}
 --- !u!1 &1419615447
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,7 +3078,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593490070}
-  - component: {fileID: 1593490071}
   m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -3059,23 +3097,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1135194874}
-  - {fileID: 863480167}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1593490071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593490069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a6acf345b0ff640ab65447557d75f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 863480163}
 --- !u!1 &1683110892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,14 +3162,14 @@ RectTransform:
   m_GameObject: {fileID: 1712973185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.97, y: 0.97, z: 0.97}
   m_Children: []
   m_Father: {fileID: 1141703287}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175, y: 225}
+  m_AnchoredPosition: {x: 175, y: 197}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712973187
