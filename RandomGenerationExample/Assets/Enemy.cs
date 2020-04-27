@@ -17,38 +17,48 @@ public class Enemy : MonoBehaviour
     public bool shooting;
     public bool isFlipped = false;
     public GameObject xplosion;
+    public bool moving = false;
 
     //Animator
     public Animator animator;
 
     void Start()
     {
-       player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     
     void Update()
     {
-        //Animation 
-        animator.SetFloat("Speed",transform.position.x);
 
         //Will be always facing player and some enemies distance themselves.
         LookPlayer();
         if( Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
         	transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            moving = true;
+            animator.SetBool("moving",true);
         }
 
         else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
         {
         	transform.position = this.transform.position;
+            moving = true;
+            animator.SetBool("moving",true);
         }
 
         else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
         	transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            moving = true;
+            animator.SetBool("moving",true);
         }
-        //only enemy is shooting enables time between shots
+        else
+        {
+            moving = false;
+        }
+    //only enemy is shooting enables time between shots
     if(shooting == true)
     {
         if (timeBtwShots <= 0)
