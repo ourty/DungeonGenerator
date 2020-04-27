@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start () 
     {
+        pausebutton.SetActive(true);
         pauseMenuUI.SetActive(false);
     }
     public void pausemenu()
