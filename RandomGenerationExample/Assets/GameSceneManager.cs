@@ -10,7 +10,7 @@ public class GameSceneManager : MonoBehaviour
     public GameObject game; //Grabs Game GameObject to spawn new object and use other data
     public GameObject miniMap; //Grabs Minimap GameObject to spawn new objects and use other data
     public GameObject[] floorGenerationTools;
-    public static int playerCharacter = 0;
+    public static int playerCharacter = 1;
     private void Awake() {
         current = this;
     }

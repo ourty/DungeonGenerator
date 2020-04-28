@@ -10,6 +10,7 @@ TagManager:
   - ClosedPoint
   - PlayerPoint
   - RootObjects
+  - UIButtons
   layers:
   - Default
   - TransparentFX
