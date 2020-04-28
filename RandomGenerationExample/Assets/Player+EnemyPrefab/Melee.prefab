@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6185633568504974132}
   - component: {fileID: 6185633568504974133}
   - component: {fileID: 6185633568504974130}
+  - component: {fileID: 3661296876618766377}
   - component: {fileID: 6185633568504974131}
   m_Layer: 9
   m_Name: Melee
@@ -205,6 +206,23 @@ MonoBehaviour:
   rb: {fileID: 6185633568504974131}
   deathEffect: {fileID: 7880675653649317114, guid: 0243c28f6fe8641959516e2e933578dc,
     type: 3}
+--- !u!114 &3661296876618766377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185633568504974128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1314fe534e0fa9d4fae210a79d1cd4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6185633568504974135}
+  speed: 2
+  innerCircle: {fileID: 0}
+  outerCircle: {fileID: 0}
+  rb: {fileID: 6185633568504974131}
 --- !u!50 &6185633568504974131
 Rigidbody2D:
   serializedVersion: 4
