@@ -51,12 +51,4 @@ public class EventManager : MonoBehaviour
             onGameRunEnd();
         }
     }
-    public event Action onFloorRoomSpawn;
-    public void FloorRoomSpawn()
-    {
-        if (onFloorRoomSpawn != null)
-        {
-            onFloorRoomSpawn();
-        }
-    }
 }

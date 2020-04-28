@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 1174414799}
   - component: {fileID: 1174414798}
   - component: {fileID: 1174414801}
+  - component: {fileID: 1174414802}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -504,6 +505,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1174414802}
+        m_MethodName: playerPickedRaider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1174414801}
         m_MethodName: loadGameStart
         m_Mode: 1
@@ -563,6 +575,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53520ccb0e81b754ca1944587520a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1174414802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174414796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFloor: 0
+  game: {fileID: 0}
+  miniMap: {fileID: 0}
+  floorGenerationTools: []
 --- !u!1 &1394954442
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +603,7 @@ GameObject:
   - component: {fileID: 1394954446}
   - component: {fileID: 1394954445}
   - component: {fileID: 1394954444}
+  - component: {fileID: 1394954448}
   - component: {fileID: 1394954447}
   m_Layer: 5
   m_Name: Button
@@ -645,6 +674,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1394954448}
+        m_MethodName: playerPickedNinja
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1394954447}
         m_MethodName: loadGameStart
         m_Mode: 1
@@ -704,6 +744,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53520ccb0e81b754ca1944587520a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1394954448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394954442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFloor: 0
+  game: {fileID: 0}
+  miniMap: {fileID: 0}
+  floorGenerationTools: []
 --- !u!1 &1473293840
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +773,7 @@ GameObject:
   - component: {fileID: 1473293843}
   - component: {fileID: 1473293842}
   - component: {fileID: 1473293845}
+  - component: {fileID: 1473293846}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -786,6 +843,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1473293846}
+        m_MethodName: playerPickedAdventurer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1473293845}
         m_MethodName: loadGameStart
         m_Mode: 1
@@ -845,6 +913,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53520ccb0e81b754ca1944587520a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1473293846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473293840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFloor: 0
+  game: {fileID: 0}
+  miniMap: {fileID: 0}
+  floorGenerationTools: []
 --- !u!1 &1476756253
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +1033,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1532035056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532035058}
+  - component: {fileID: 1532035057}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532035057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532035056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFloor: 0
+  game: {fileID: 0}
+  miniMap: {fileID: 0}
+  floorGenerationTools:
+  - {fileID: 4697857436416216087, guid: 59bc2c0649cb54e46bc8e9dcd5b0aa36, type: 3}
+  - {fileID: 8557178281680152388, guid: 96055c4b63ac84b47808aa67e0c34df0, type: 3}
+  - {fileID: 1521555755974633378, guid: aadb2caf8d8d9304eb0abc332deca607, type: 3}
+--- !u!4 &1532035058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532035056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540793848
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1132,7 @@ GameObject:
   - component: {fileID: 1728895083}
   - component: {fileID: 1728895082}
   - component: {fileID: 1728895085}
+  - component: {fileID: 1728895086}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1067,6 +1202,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1728895086}
+        m_MethodName: playerPickedSwindler
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1728895085}
         m_MethodName: loadGameStart
         m_Mode: 1
@@ -1126,6 +1272,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53520ccb0e81b754ca1944587520a79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1728895086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728895080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFloor: 0
+  game: {fileID: 0}
+  miniMap: {fileID: 0}
+  floorGenerationTools: []
 --- !u!1 &1780513085
 GameObject:
   m_ObjectHideFlags: 0

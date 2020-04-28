@@ -54,6 +54,11 @@ public class Door : MonoBehaviour
         player.SetActive(false);
         player.transform.SetPositionAndRotation(playerMove, Quaternion.identity);
         Camera.main.transform.Translate(move);
+        player.GetComponent<Joystick>().pointA += move;
+        player.GetComponent<Joystick>().outerCircle.Translate(move);
+        player.GetComponent<Joystick>().innerCircle.Translate(move);
+        player.GetComponent<Joystick>().pointB += move;
+        
         player.SetActive(true);
     }
 }
