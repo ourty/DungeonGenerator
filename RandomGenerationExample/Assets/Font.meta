@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:RandomGenerationExample/Assets/Font.meta
 guid: e9787247e3b649f4d86c3570639bc208
+=======
+<<<<<<< Updated upstream
+guid: b0fbcfa2eab2c4d358363c44aaf51411
+=======
+guid: 99968d6dc626bef46aaa8eee6d10f4ff
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes:RandomGenerationExample/Assets/Player+EnemyPrefab.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
