@@ -11,6 +11,10 @@ TagManager:
   - Projectile
   - Enemy
   - ProjectileW
+  - PowerUp
+  - SpeedUp
+  - DMGUp
+  - OneUp
   layers:
   - Default
   - TransparentFX

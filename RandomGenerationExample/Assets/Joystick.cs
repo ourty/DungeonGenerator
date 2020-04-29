@@ -5,7 +5,7 @@ using UnityEngine;
 public class Joystick : MonoBehaviour
 {
     public Transform player;
-    public float speed = 2.0f;
+    public float speed = 4.0f;
     private bool touchStart = false;
     private Vector2 pointA;
     private Vector2 pointB;
@@ -20,16 +20,27 @@ public class Joystick : MonoBehaviour
     private Transform aimTransform;
     private float timeBtwShots;
     public float startTimeBtwShots;
-
     public battlebutton button;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public GameObject deathEffect;
+    public PlayerAmmo PlayerProj;
 
     private void Awake()
     {
         aimTransform = transform.Find("Aim");
     }
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth <=0)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
         if (Input.GetMouseButtonDown(0))
         {
             pointA = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
@@ -100,5 +111,66 @@ public class Joystick : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+    }
+    void Slowed()
+    {
+        speed = 2f;
+    }
+    void ReturnSpd()
+    {
+        speed = 4f;
+    }
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Is hurt");
+            TakeDamage(20);
+        }
+
+         if (col.gameObject.tag =="Projectile")
+        {
+            Debug.Log("Is hurt(Projectile");
+            TakeDamage(10);
+        }
+
+        if (col.gameObject.tag =="ProjectileW")
+        {
+            Debug.Log("Is hurt(Projectile");
+            Slowed();
+            Invoke("ReturnSpd",4f);
+            TakeDamage(10);
+
+        }
+        if (col.gameObject.tag == "SpeedUp")
+        {
+            Debug.Log("SpedUp");
+            Destroy(col.gameObject);
+            speed += 1f;
+        }
+        if (col.gameObject.tag == "PowerUp")
+        {
+            Debug.Log("AttackSpd");
+            Destroy(col.gameObject);
+            startTimeBtwShots = startTimeBtwShots / 1.25f;
+        }
+        if (col.gameObject.tag == "DMGUp")
+        {
+            Debug.Log("DoubleTap");
+            Destroy(col.gameObject);
+            PlayerProj.dmg += 10;
+        }
+        if (col.gameObject.tag == "OneUp")
+        {
+            Debug.Log("SizeUp");
+            Destroy(col.gameObject);
+            PlayerProj.transform.localScale += new Vector3 (.25f,.25f,.25f);
+        }
+
     }
 }

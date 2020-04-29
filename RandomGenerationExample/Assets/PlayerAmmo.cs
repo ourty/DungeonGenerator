@@ -9,7 +9,7 @@ public class PlayerAmmo : MonoBehaviour
 	public float distance;
 	public GameObject destroyEffect;
 	public LayerMask whatIsSolid;
-	public int dmg;
+	public int dmg = 10;
 	private void Start()
 	{
 		Invoke("DestroyBullet", lifeTime);

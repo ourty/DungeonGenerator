@@ -65,6 +65,12 @@ public class Player: MonoBehaviour
             TakeDamage(10);
 
         }
+        if (col.gameObject.tag == "PowerUp")
+        {
+            Debug.Log("PoweredUp");
+            Destroy(col.gameObject);
+            speed =+ 1;
+        }
 
     }
 }
