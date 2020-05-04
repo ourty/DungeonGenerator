@@ -5,18 +5,31 @@ using UnityEngine;
 public class TouchInputs : MonoBehaviour
 {
     public GameObject player;
-    public GameObject aStick;
+    public GameObject gun;
+    AttackJoystick aStick;
     PlayerJoystick pStick;
     bool isPlayerStickBeingUsed = false;
     bool isAttackStickBeingUsed = false;
-    int pStickFingerID;
-    int aStickFingerID;
     private void Start()
     {
         pStick = player.GetComponent<PlayerJoystick>();
+        aStick = gun.GetComponent<AttackJoystick>();
     }
     void Update()
     {
+        //test
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     //Get the mouse position on the screen and send a raycast into the game world from that position.
+        //     Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+
+        //     //If something was hit, the RaycastHit2D.collider will not be null.
+        //     if (hit.collider != null)
+        //     {
+        //         Debug.Log(hit.collider.tag);
+        //     }
+        // }
         if (Input.touchCount > 0)
         {
             foreach (Touch t in Input.touches)
@@ -24,7 +37,7 @@ public class TouchInputs : MonoBehaviour
                 if (t.phase == TouchPhase.Began)
                 {
                     RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint((t.position)), Vector2.zero);
-                    if (hit.collider == null)
+                    if (hit.collider == null || !hit.collider.CompareTag("UIButtons"))
                     {
                         if (!isPlayerStickBeingUsed)
                         {
@@ -35,21 +48,33 @@ public class TouchInputs : MonoBehaviour
                             pStick.fingerID = t.fingerId;
                         }
                     }
+                    else if (hit.collider.CompareTag("UIButtons"))
+                    {
+                        if (!isAttackStickBeingUsed)
+                        {
+                            isAttackStickBeingUsed = true;
+                            aStick.finger = t;
+                            aStick.initializeStick();
+                            aStick.touchStart = true;
+                            aStick.fingerID = t.fingerId;
+                        }
+                    }
                 }
-                else if (t.phase == TouchPhase.Ended)
+                else if (t.phase == TouchPhase.Ended || t.phase == TouchPhase.Canceled)
                 {
-                    if (pStickFingerID == t.fingerId)
+                    if (pStick.fingerID == t.fingerId)
                     {
                         isPlayerStickBeingUsed = false;
                         pStick.touchStart = false;
                     }
+                    else if (aStick.fingerID == t.fingerId)
+                    {
+                        isAttackStickBeingUsed = false;
+                        aStick.touchStart = false;
+                    }
                 }
                 else if (t.phase == TouchPhase.Moved)
                 {
-                    if (pStickFingerID == t.fingerId)
-                    {
-                        //pStick.pointB = Camera.main.ScreenToWorldPoint(new Vector3(t.position.x, t.position.y, Camera.main.transform.position.z));
-                    }
                 }
             }
         }

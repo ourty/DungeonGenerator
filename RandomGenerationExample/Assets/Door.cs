@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     public char exit;
     GameObject playerPoint;
     GameObject player;
+    GameObject gun;
     PlayerPoint playerPointData;
     GameObject[] tempFind;
     void Start()
@@ -19,6 +20,7 @@ public class Door : MonoBehaviour
         if (hit.CompareTag("Player"))
         {
             player = hit.gameObject;
+            gun = player.transform.GetChild(1).gameObject;
             MoveRooms();
         }
     }
@@ -55,8 +57,8 @@ public class Door : MonoBehaviour
         player.transform.SetPositionAndRotation(playerMove, Quaternion.identity);
         Camera.main.transform.Translate(move);
         player.GetComponent<PlayerJoystick>().pointA += move;
-        player.GetComponent<PlayerJoystick>().outerCircle.Translate(move);
-        player.GetComponent<PlayerJoystick>().innerCircle.Translate(move);
+        gun.GetComponent<AttackJoystick>().pointB += move;
+        gun.GetComponent<AttackJoystick>().pointA += move;
         player.GetComponent<PlayerJoystick>().pointB += move;
         
         player.SetActive(true);
