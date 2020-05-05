@@ -23,7 +23,7 @@ public class Player: MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if (currentHealth <=0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Debug.Log("No HP");
         }
     }
     void FixedUpdate()

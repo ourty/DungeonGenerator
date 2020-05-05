@@ -39,7 +39,7 @@ public class Joystick : MonoBehaviour
     {
         if (currentHealth <=0)
         {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Debug.Log("NOHP");
         }
         if (Input.GetMouseButtonDown(0))
         {
