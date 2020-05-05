@@ -24,6 +24,9 @@ public class PlayerAmmo : MonoBehaviour
 			{
 				Debug.Log("Enemy is hit");
 				hitInfo.collider.GetComponent<Enemy>().TakeDmg(dmg);
+				hitInfo.collider.GetComponent<SlimeKing>().TakeDmg(dmg);
+				hitInfo.collider.GetComponent<SlimeEnemy>().TakeDmg(dmg);
+				DestroyBullet();
 			}
 			DestroyBullet();
 		}

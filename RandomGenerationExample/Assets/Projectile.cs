@@ -29,6 +29,8 @@ public class Projectile : MonoBehaviour
 			if (hitInfo.collider.CompareTag("Player"))
 			{
 				Debug.Log("Player hit");
+				DestroyProjectile();
+				Destroy(gameObject);
 			}
 			DestroyProjectile();
 		}
@@ -45,6 +47,7 @@ public class Projectile : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 		DestroyProjectile();
+		Destroy(gameObject);
 		}
 	}
 

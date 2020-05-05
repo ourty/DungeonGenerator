@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1363536355928271570}
   - component: {fileID: 79950190112200564}
-  - component: {fileID: 5316725521679058848}
   - component: {fileID: 3945286460142841850}
   - component: {fileID: 7372975545005366108}
   - component: {fileID: 6254590366784950139}
+  - component: {fileID: 402539676328455835}
   m_Layer: 8
   m_Name: Slime_S
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3155312233216546084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.075365, y: -1.1455457, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,32 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5316725521679058848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155312233216546084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b2d63033323420490bb464e119d017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 40
-  speed: 2
-  stoppingDistance: 5
-  retreatDistance: 5
-  startTimeBtwShots: 2
-  projectile: {fileID: 7518500477853349765, guid: 4c9b790e0f1a5457d809b4cc4168725a,
-    type: 3}
-  player: {fileID: 0}
-  shooting: 1
-  isFlipped: 1
-  xplosion: {fileID: 7880675653649317114, guid: 0243c28f6fe8641959516e2e933578dc,
-    type: 3}
-  moving: 0
-  animator: {fileID: 0}
 --- !u!50 &3945286460142841850
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.012244463, y: -0.0428555}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.11}
+  m_Size: {x: 0.27918524, y: 0.18714839}
   m_EdgeRadius: 0
 --- !u!95 &6254590366784950139
 Animator:
@@ -177,3 +151,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &402539676328455835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155312233216546084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960fb82ba47d24c5a9c574fbe24ebc5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  speed: 1.5
+  stoppingDistance: 4
+  retreatDistance: 4
+  startTimeBtwShots: 2
+  projectile: {fileID: 6463928013246413105, guid: a6099639d3dc447bf80054206b923add,
+    type: 3}
+  player: {fileID: 0}
+  shooting: 1
+  isFlipped: 1
+  animator: {fileID: 6254590366784950139}
