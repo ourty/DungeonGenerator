@@ -55,7 +55,7 @@ public class PlayerJoystick : MonoBehaviour
             }
             pointB = Camera.main.ScreenToWorldPoint(new Vector3(finger.position.x, finger.position.y, Camera.main.transform.position.z));
             Vector2 offset = pointB - pointA;
-            direction = Vector2.ClampMagnitude(offset, 10.0f);
+            direction = Vector2.ClampMagnitude(offset, 8.0f);
             //Debug.Log(offset.normalized + " " + offset.x + " " + offset.y);
             moving = true;
             innerCircle.transform.position = new Vector2(pointA.x + direction.x, pointA.y + direction.y);

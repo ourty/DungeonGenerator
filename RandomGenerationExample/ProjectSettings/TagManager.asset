@@ -11,6 +11,9 @@ TagManager:
   - PlayerPoint
   - RootObjects
   - UIButtons
+  - Projectile
+  - Walls
+  - Enemy
   layers:
   - Default
   - TransparentFX

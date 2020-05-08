@@ -35,6 +35,14 @@ public class EventManager : MonoBehaviour
             onStartLoading();
         }
     }
+    public event Action<GameObject> onUpdateCurrentRoom;
+    public void updateCurrentRoom(GameObject currentRoom)
+    {
+        if (onUpdateCurrentRoom != null)
+        {
+            onUpdateCurrentRoom(currentRoom);
+        }
+    }
     public event Action onGameRunStart;
     public void GameRunStart()
     {

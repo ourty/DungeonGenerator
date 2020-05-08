@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4761150501972819186}
   - component: {fileID: 4761150501972819185}
   - component: {fileID: 4761150501972819184}
+  - component: {fileID: 7059733508338717602}
   m_Layer: 9
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -96,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exit: 76
+  sprites: []
 --- !u!61 &4761150501972819184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +124,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6, y: 6}
   m_EdgeRadius: 0
+--- !u!95 &7059733508338717602
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4761150501972819190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b87e9406fd3ab64a8cad094a3bce79b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

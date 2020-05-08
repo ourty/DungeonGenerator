@@ -6,14 +6,14 @@ public class RoomNodeData : MonoBehaviour
 {
 
     public bool roomInstatiated = false;
-    bool pushOpenings = false;
+    bool pushDoors = false;
     public GameObject connectedRoom;
-    public char[] Openings;
+    public char[] Doors;
     private void Update()
     {
-        if(roomInstatiated && !pushOpenings){
-            connectedRoom.GetComponent<RoomData>().doorways = Openings;
-            pushOpenings = true;
+        if(roomInstatiated && !pushDoors){
+            connectedRoom.GetComponent<RoomData>().doorways = Doors;
+            pushDoors = true;
             connectedRoom.GetComponent<RoomData>().SpawnDoors();
         }
     }

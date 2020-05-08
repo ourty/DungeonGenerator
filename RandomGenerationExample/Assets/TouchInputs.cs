@@ -10,6 +10,7 @@ public class TouchInputs : MonoBehaviour
     PlayerJoystick pStick;
     bool isPlayerStickBeingUsed = false;
     bool isAttackStickBeingUsed = false;
+    GameObject aButton;
     private void Start()
     {
         pStick = player.GetComponent<PlayerJoystick>();
@@ -55,6 +56,9 @@ public class TouchInputs : MonoBehaviour
                             isAttackStickBeingUsed = true;
                             aStick.finger = t;
                             aStick.initializeStick();
+                            hit.collider.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                            aButton = hit.collider.gameObject;
+                            aStick.timeBtwShots = aStick.startTimeBtwShots;
                             aStick.touchStart = true;
                             aStick.fingerID = t.fingerId;
                         }
@@ -67,9 +71,10 @@ public class TouchInputs : MonoBehaviour
                         isPlayerStickBeingUsed = false;
                         pStick.touchStart = false;
                     }
-                    else if (aStick.fingerID == t.fingerId)
+                    if (aStick.fingerID == t.fingerId)
                     {
                         isAttackStickBeingUsed = false;
+                        aButton.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                         aStick.touchStart = false;
                     }
                 }

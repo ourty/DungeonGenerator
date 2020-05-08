@@ -804,7 +804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomInstatiated: 0
   connectedRoom: {fileID: 0}
-  Openings: 4c005200
+  Doors: 52004c00
 --- !u!1 &2399794188016576451
 GameObject:
   m_ObjectHideFlags: 0
