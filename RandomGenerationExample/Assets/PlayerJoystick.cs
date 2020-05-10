@@ -19,6 +19,10 @@ public class PlayerJoystick : MonoBehaviour
     public int fingerID;
     public int maxHealth = 100;
     public int currentHealth;
+    public PlayerBullet bullet;
+    public AttackJoystick gun;
+    public Transform holdSlot;
+    private Transform buddy;
     //public HealthBar healthbar;
 
     private void Awake()
@@ -46,11 +50,11 @@ public class PlayerJoystick : MonoBehaviour
     }
     void Start()
     {
-        //PlayerProj.transform.localScale = new Vector3 (2f,2f,2f);
+        bullet.transform.localScale = new Vector3 (2.5f,1f,1f);
         currentHealth = maxHealth;
         //healthbar.SetMaxHealth(maxHealth);
-        //timeBtwShots = 1 ;
-        //PlayerProj.dmg = 10;
+        gun.timeBtwShots = 1 ;
+        bullet.dmg = 10;
     }
     // Update is called once per frame
     void Update()
@@ -132,23 +136,23 @@ public class PlayerJoystick : MonoBehaviour
             Destroy(col.gameObject);
             speed += 1f;
         }
-        /*if (col.gameObject.tag == "PowerUp")
+        if (col.gameObject.tag == "PowerUp")
         {
             Debug.Log("AttackSpd");
             Destroy(col.gameObject);
-            startTimeBtwShots = startTimeBtwShots / 1.25f;
+            gun.startTimeBtwShots = gun.startTimeBtwShots / 1.25f;
         }
         if (col.gameObject.tag == "DMGUp")
         {
             Debug.Log("DoubleTap");
             Destroy(col.gameObject);
-            PlayerProj.dmg += 10;
+            bullet.dmg += 10;
         }
         if (col.gameObject.tag == "OneUp")
         {
             Debug.Log("SizeUp");
             Destroy(col.gameObject);
-            PlayerProj.transform.localScale += new Vector3 (.25f,.25f,.25f);
+            bullet.transform.localScale += new Vector3 (.25f,.25f,.25f);
         }
         
         if (col.gameObject.tag == "microwave")
@@ -160,7 +164,7 @@ public class PlayerJoystick : MonoBehaviour
             buddy.transform.parent = player;
             buddy.transform.position = holdSlot.transform.position;
         }
-        */
+
         if (col.gameObject.tag == "MaxHp")
         {
             Debug.Log("MaxHP increased");
