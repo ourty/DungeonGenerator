@@ -16,6 +16,8 @@ TagManager:
   - DMGUp
   - OneUp
   - microwave
+  - MaxHp
+  - 1stAid
   layers:
   - Default
   - TransparentFX
