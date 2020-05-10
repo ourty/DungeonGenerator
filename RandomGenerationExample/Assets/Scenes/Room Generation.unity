@@ -2470,6 +2470,11 @@ PrefabInstance:
       propertyPath: isloading
       value: 
       objectReference: {fileID: 939471828}
+    - target: {fileID: 2071453796448617922, guid: de653f03d47ee41bdb476d31086a3ff8,
+        type: 3}
+      propertyPath: HpBar
+      value: 
+      objectReference: {fileID: 2001658288}
     - target: {fileID: 2071453797165522485, guid: de653f03d47ee41bdb476d31086a3ff8,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -2659,6 +2664,11 @@ PrefabInstance:
       propertyPath: isloading
       value: 
       objectReference: {fileID: 939471828}
+    - target: {fileID: 2395658395241611414, guid: 44a2bb429e4a24e919cecb6359f7e057,
+        type: 3}
+      propertyPath: HpBar
+      value: 
+      objectReference: {fileID: 2001658288}
     - target: {fileID: 2395658396142729790, guid: 44a2bb429e4a24e919cecb6359f7e057,
         type: 3}
       propertyPath: m_LocalPosition.z

@@ -161,7 +161,7 @@ public class PlayerJoystick : MonoBehaviour
             bullet.transform.localScale += new Vector3 (.25f,.25f,.25f);
         }
         
-        if (col.gameObject.tag == "microwave")
+       /*if (col.gameObject.tag == "microwave")
         {
             Debug.Log("Microwave buddy");
             col.gameObject.GetComponent<powerup>().enabled = false;
@@ -169,7 +169,7 @@ public class PlayerJoystick : MonoBehaviour
             buddy = col.transform;
             buddy.transform.parent = player;
             buddy.transform.position = holdSlot.transform.position;
-        }
+        }*/
 
         if (col.gameObject.tag == "MaxHp")
         {
