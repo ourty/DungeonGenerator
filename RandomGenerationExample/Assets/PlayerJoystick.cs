@@ -17,6 +17,9 @@ public class PlayerJoystick : MonoBehaviour
     Vector2 direction = new Vector2(0f, 0f);
     public Touch finger;
     public int fingerID;
+    public int maxHealth = 100;
+    public int currentHealth;
+    //public HealthBar healthbar;
 
     private void Awake()
     {
@@ -40,6 +43,14 @@ public class PlayerJoystick : MonoBehaviour
             animator = gameObject.transform.GetChild(0).transform.GetChild(3).GetComponent<Animator>();
             gameObject.transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(true);
         }
+    }
+    void Start()
+    {
+        //PlayerProj.transform.localScale = new Vector3 (2f,2f,2f);
+        currentHealth = maxHealth;
+        //healthbar.SetMaxHealth(maxHealth);
+        //timeBtwShots = 1 ;
+        //PlayerProj.dmg = 10;
     }
     // Update is called once per frame
     void Update()
@@ -94,5 +105,80 @@ public class PlayerJoystick : MonoBehaviour
     void move()
     {
         rb.velocity = new Vector2(direction.normalized.x, direction.normalized.y);
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        //healthbar.SetHealth(currentHealth);
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Is hurt");
+            TakeDamage(20);
+        }
+
+         if (col.gameObject.tag =="Projectile")
+        {
+            Debug.Log("Is hurt(Projectile");
+            TakeDamage(10);
+        }
+
+        if (col.gameObject.tag == "SpeedUp")
+        {
+            Debug.Log("SpedUp");
+            Destroy(col.gameObject);
+            speed += 1f;
+        }
+        /*if (col.gameObject.tag == "PowerUp")
+        {
+            Debug.Log("AttackSpd");
+            Destroy(col.gameObject);
+            startTimeBtwShots = startTimeBtwShots / 1.25f;
+        }
+        if (col.gameObject.tag == "DMGUp")
+        {
+            Debug.Log("DoubleTap");
+            Destroy(col.gameObject);
+            PlayerProj.dmg += 10;
+        }
+        if (col.gameObject.tag == "OneUp")
+        {
+            Debug.Log("SizeUp");
+            Destroy(col.gameObject);
+            PlayerProj.transform.localScale += new Vector3 (.25f,.25f,.25f);
+        }
+        
+        if (col.gameObject.tag == "microwave")
+        {
+            Debug.Log("Microwave buddy");
+            col.gameObject.GetComponent<powerup>().enabled = false;
+            //col.gameObject.GetComponent<Microwave>().pickedup = true;
+            buddy = col.transform;
+            buddy.transform.parent = player;
+            buddy.transform.position = holdSlot.transform.position;
+        }
+        */
+        if (col.gameObject.tag == "MaxHp")
+        {
+            Debug.Log("MaxHP increased");
+            Destroy(col.gameObject);
+            maxHealth += 25;
+            if (currentHealth != maxHealth)
+            {
+            currentHealth += 10;
+            }
+            //healthbar.SetHealth(currentHealth);
+        }
+        if (col.gameObject.tag == "1stAid")
+        {
+            Debug.Log("Heal");
+            Destroy(col.gameObject);
+            currentHealth += 50;
+            //healthbar.SetHealth(currentHealth);
+        }
+
     }
 }

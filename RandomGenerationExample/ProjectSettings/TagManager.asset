@@ -14,6 +14,12 @@ TagManager:
   - Projectile
   - Walls
   - Enemy
+  - DMGUp
+  - SpeedUp
+  - OneUp
+  - MaxHp
+  - PowerUp
+  - 1stAid
   layers:
   - Default
   - TransparentFX
