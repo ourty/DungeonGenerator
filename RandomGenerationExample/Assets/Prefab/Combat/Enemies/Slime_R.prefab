@@ -98,10 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  speed: 7
-  stoppingDistance: 30
-  retreatDistance: 15
-  startTimeBtwShots: 1
+  speed: 6
+  dmg: 10
+  stoppingDistance: 50
+  retreatDistance: 20
+  startTimeBtwShots: 2
   projectile: {fileID: 6463928013246413105, guid: 50fba4b284d51c94e8e9e8089547c092,
     type: 3}
   player: {fileID: 0}

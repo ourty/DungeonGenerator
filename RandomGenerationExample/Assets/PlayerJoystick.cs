@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerJoystick : MonoBehaviour
 {
     public Transform player;
+    public float health;
     public float speed = 5.0f;
     public bool touchStart = false;
     public Vector2 pointA;
@@ -44,6 +45,9 @@ public class PlayerJoystick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0){
+            EventManager.current.GameRunEnd();
+        }
         if (touchStart)
         {
             if(Input.touchCount > 0)
@@ -94,5 +98,8 @@ public class PlayerJoystick : MonoBehaviour
     void move()
     {
         rb.velocity = new Vector2(direction.normalized.x, direction.normalized.y);
+    }
+    public void TakeDmg(int dmg){
+        health -= dmg;
     }
 }

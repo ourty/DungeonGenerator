@@ -31,7 +31,10 @@ public class PlayerBullet : MonoBehaviour
             {
                 other.GetComponent<SlimeEnemy>().TakeDmg(dmg);
             }
-            // other.GetComponent<Enemy>().TakeDmg(dmg);
+            if (other.name == "Slime_King")
+            {
+                other.GetComponent<SlimeKing>().TakeDmg(dmg);
+            }
             DestroyBullet();
         }
         if (other.CompareTag("Walls"))

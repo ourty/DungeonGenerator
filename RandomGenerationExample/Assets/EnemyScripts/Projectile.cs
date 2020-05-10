@@ -26,6 +26,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<PlayerJoystick>().TakeDmg(dmg);
             DestroyBullet();
         }
         if (other.CompareTag("Walls"))

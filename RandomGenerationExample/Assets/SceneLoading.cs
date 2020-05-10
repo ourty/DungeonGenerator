@@ -17,4 +17,8 @@ public class SceneLoading : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void loadCharacterDeath()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
