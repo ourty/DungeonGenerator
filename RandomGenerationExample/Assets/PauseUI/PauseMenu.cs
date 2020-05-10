@@ -7,11 +7,23 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject pausebutton;
+    public LoadingScreen isloading;
+    public GameObject HpBar;
 
     void Start () 
     {
-        pausebutton.SetActive(true);
+        //Pause button and HpBar is suppose to be not active when loading screen is shown
+        pausebutton.SetActive(false);
         pauseMenuUI.SetActive(false);
+        HpBar.SetActive(false);
+    }
+    void Update()
+    {
+        if (isloading.GetComponent<LoadingScreen>().enabled == false)
+        {
+            pausebutton.SetActive(true);
+            HpBar.SetActive(true);
+        } 
     }
     public void pausemenu()
     {

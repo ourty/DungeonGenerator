@@ -23,7 +23,7 @@ public class PlayerJoystick : MonoBehaviour
     public AttackJoystick gun;
     public Transform holdSlot;
     private Transform buddy;
-    //public HealthBar healthbar;
+    public HealthBar healthbar;
 
     private void Awake()
     {
@@ -52,7 +52,7 @@ public class PlayerJoystick : MonoBehaviour
     {
         bullet.transform.localScale = new Vector3 (2.5f,1f,1f);
         currentHealth = maxHealth;
-        //healthbar.SetMaxHealth(maxHealth);
+        healthbar.SetMaxHealth(maxHealth);
         gun.timeBtwShots = 1 ;
         bullet.dmg = 10;
     }
@@ -82,11 +82,17 @@ public class PlayerJoystick : MonoBehaviour
             innerCircle.GetComponent<SpriteRenderer>().enabled = false;
             outerCircle.GetComponent<SpriteRenderer>().enabled = false;
         }
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+            healthbar.SetHealth(currentHealth);
+        }
         move();
         animator.SetFloat("front", -(direction.y));
         animator.SetFloat("back", (direction.y));
         animator.SetFloat("left", -(direction.x));
         animator.SetFloat("right", (direction.x));
+
     }
     public void initializeStick()
     {
@@ -113,7 +119,7 @@ public class PlayerJoystick : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        //healthbar.SetHealth(currentHealth);
+        healthbar.SetHealth(currentHealth);
     }
 
     public void OnCollisionEnter2D(Collision2D col)
@@ -174,14 +180,14 @@ public class PlayerJoystick : MonoBehaviour
             {
             currentHealth += 10;
             }
-            //healthbar.SetHealth(currentHealth);
+            healthbar.SetHealth(currentHealth);
         }
         if (col.gameObject.tag == "1stAid")
         {
             Debug.Log("Heal");
             Destroy(col.gameObject);
             currentHealth += 50;
-            //healthbar.SetHealth(currentHealth);
+            healthbar.SetHealth(currentHealth);
         }
 
     }
