@@ -5,57 +5,43 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 	public float speed;
-
-	private Transform player;
+    public float lifeTime;
+    public float distance;
+    public GameObject destroyEffect;
+    public int dmg = 10;
 	private Vector2 target;
-	public GameObject destroyeffect;
-	public float lifeTime;
-	public float distance;
-	public LayerMask solid;
+	private int distTraveled = 0;
+    private void Start()
+    {
+        Invoke("DestroyBullet", lifeTime);
+		targetPlayer();
+    }
 
-	void Start()
-	{
-		Invoke("DestroyProjectile",lifeTime);
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+    private void Update()
+    {
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-		target = new Vector2(player.position.x, player.position.y);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            DestroyBullet();
+        }
+        if (other.CompareTag("Walls"))
+        {
+            DestroyBullet();
+        }
+    }
+	void targetPlayer(){
+		target = GameObject.FindGameObjectWithTag("Player").transform.position;
+		Vector2 direction = target - (Vector2)transform.position;
+		var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 	}
-
-	void Update()
-	{
-		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position,transform.up,distance,solid);
-		if (hitInfo.collider !=null)
-		{
-			if (hitInfo.collider.CompareTag("Player"))
-			{
-				Debug.Log("Player hit");
-				DestroyProjectile();
-				Destroy(gameObject);
-			}
-			DestroyProjectile();
-		}
-		transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-		if(transform.position.x == target.x && transform.position.y == target.y)
-		{
-			DestroyProjectile();
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Player"))
-		{
-		DestroyProjectile();
-		Destroy(gameObject);
-		}
-	}
-
-	void DestroyProjectile()
-	{
-		Instantiate(destroyeffect, transform.position,Quaternion.identity);
-		Destroy(gameObject);
-	}
-
+    void DestroyBullet()
+    {
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 }
-

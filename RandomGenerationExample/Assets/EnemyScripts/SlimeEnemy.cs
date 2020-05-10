@@ -14,7 +14,7 @@ public class SlimeEnemy : MonoBehaviour
 
     public GameObject projectile;
     public Transform player;
-    public bool shooting;
+    public bool shoots;
     public bool isFlipped = false;
 
 
@@ -52,7 +52,7 @@ public class SlimeEnemy : MonoBehaviour
         }
 
         //only enemy is shooting enables time between shots
-        if (shooting == true)
+        if (shoots == true)
         {
             if (timeBtwShots <= 0)
             {

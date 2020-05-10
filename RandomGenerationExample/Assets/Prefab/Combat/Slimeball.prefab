@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5698712659667345493}
   - component: {fileID: 7665673098488650925}
   - component: {fileID: 243985561023924147}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slimeball
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6463928013246413105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4203277, y: -2.3810213, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,15 +70,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47d038657f1be4acb888f62fe2c72c90, type: 3}
-  m_Color: {r: 0.5449739, g: 1, b: 0.08018869, a: 1}
+  m_SortingLayerID: 1888438759
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: c2673cffcfbcf7f40abf4d0950b39eca, type: 3}
+  m_Color: {r: 0.3693485, g: 0.9433962, b: 0.59668696, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -94,12 +94,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 1.55
 --- !u!114 &7665673098488650925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,17 +109,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6463928013246413105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f667cadd1a533407387e0414d14ccc24, type: 3}
+  m_Script: {fileID: 11500000, guid: a594c11d9724e7745a6593ce755d9f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  destroyeffect: {fileID: 7880675653649317114, guid: 0243c28f6fe8641959516e2e933578dc,
-    type: 3}
-  lifeTime: 1.5
-  distance: 0.5
-  solid:
-    serializedVersion: 2
-    m_Bits: 512
+  speed: 10
+  lifeTime: 1
+  distance: 10
+  destroyEffect: {fileID: 0}
+  dmg: 10
 --- !u!50 &243985561023924147
 Rigidbody2D:
   serializedVersion: 4
@@ -132,7 +129,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -140,4 +137,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
