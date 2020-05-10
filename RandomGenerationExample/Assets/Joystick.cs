@@ -25,6 +25,9 @@ public class Joystick : MonoBehaviour
     public int currentHealth;
     public GameObject deathEffect;
     public PlayerAmmo PlayerProj;
+    public HealthBar healthbar;
+    public Transform holdSlot;
+    private Transform buddy;
 
     private void Awake()
     {
@@ -32,7 +35,11 @@ public class Joystick : MonoBehaviour
     }
     void Start()
     {
+        PlayerProj.transform.localScale = new Vector3 (2f,2f,2f);
         currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
+        timeBtwShots = 1 ;
+        PlayerProj.dmg = 10;
     }
     // Update is called once per frame
     void Update()
@@ -82,6 +89,11 @@ public class Joystick : MonoBehaviour
         //****************************************
         Combat();
         move();
+        if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+                healthbar.SetHealth(currentHealth);
+            }
     }
     private void FixedUpdate() {
         
@@ -115,7 +127,7 @@ public class Joystick : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        healthbar.SetHealth(currentHealth);
     }
     void Slowed()
     {
@@ -170,6 +182,33 @@ public class Joystick : MonoBehaviour
             Debug.Log("SizeUp");
             Destroy(col.gameObject);
             PlayerProj.transform.localScale += new Vector3 (.25f,.25f,.25f);
+        }
+        if (col.gameObject.tag == "microwave")
+        {
+            Debug.Log("Microwave buddy");
+            col.gameObject.GetComponent<powerup>().enabled = false;
+            //col.gameObject.GetComponent<Microwave>().pickedup = true;
+            buddy = col.transform;
+            buddy.transform.parent = player;
+            buddy.transform.position = holdSlot.transform.position;
+        }
+        if (col.gameObject.tag == "MaxHp")
+        {
+            Debug.Log("MaxHP increased");
+            Destroy(col.gameObject);
+            maxHealth += 25;
+            if (currentHealth != maxHealth)
+            {
+            currentHealth += 10;
+            }
+            healthbar.SetHealth(currentHealth);
+        }
+        if (col.gameObject.tag == "1stAid")
+        {
+            Debug.Log("Heal");
+            Destroy(col.gameObject);
+            currentHealth += 50;
+            healthbar.SetHealth(currentHealth);
         }
 
     }

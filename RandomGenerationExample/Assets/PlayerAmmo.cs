@@ -8,7 +8,6 @@ public class PlayerAmmo : MonoBehaviour
 	public float lifeTime;
 	public float distance;
 	public GameObject destroyEffect;
-	public LayerMask whatIsSolid;
 	public int dmg = 10;
 	private void Start()
 	{
@@ -17,7 +16,7 @@ public class PlayerAmmo : MonoBehaviour
 
 	private void Update()
 	{
-		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up,distance, whatIsSolid);
+		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up,distance);
 		if (hitInfo.collider != null)
 		{
 			if(hitInfo.collider.CompareTag("Enemy"))

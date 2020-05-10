@@ -15,6 +15,7 @@ TagManager:
   - SpeedUp
   - DMGUp
   - OneUp
+  - microwave
   layers:
   - Default
   - TransparentFX

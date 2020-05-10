@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour
 	public GameObject destroyeffect;
 	public float lifeTime;
 	public float distance;
-	public LayerMask solid;
 
 	void Start()
 	{
@@ -23,7 +22,7 @@ public class Projectile : MonoBehaviour
 
 	void Update()
 	{
-		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position,transform.up,distance,solid);
+		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position,transform.up,distance);
 		if (hitInfo.collider !=null)
 		{
 			if (hitInfo.collider.CompareTag("Player"))
