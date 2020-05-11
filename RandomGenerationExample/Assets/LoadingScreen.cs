@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoadingScreen : MonoBehaviour
 {
-
+    public Animation players;
     // Start is called before the first frame update
     private void Start()
     {

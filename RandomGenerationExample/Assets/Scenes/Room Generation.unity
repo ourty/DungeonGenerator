@@ -332,7 +332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 115528970}
-  health: 10
   speed: 25
   touchStart: 0
   pointA: {x: 0, y: 0}
@@ -1711,6 +1710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939471827}
   - component: {fileID: 939471828}
+  - component: {fileID: 939471829}
   m_Layer: 5
   m_Name: Loading Screen
   m_TagString: Untagged
@@ -1725,7 +1725,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939471826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1745,6 +1745,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977865a2e619f8b45a3209cb3698ef1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: {fileID: 0}
+--- !u!111 &939471829
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939471826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1297746987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,6 +2581,11 @@ PrefabInstance:
       propertyPath: HpBar
       value: 
       objectReference: {fileID: 2001658288}
+    - target: {fileID: 2395658396142729787, guid: 44a2bb429e4a24e919cecb6359f7e057,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2395658396142729790, guid: 44a2bb429e4a24e919cecb6359f7e057,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2663,6 +2684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238907527006486812, guid: de653f03d47ee41bdb476d31086a3ff8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6238907527006486880, guid: de653f03d47ee41bdb476d31086a3ff8,
         type: 3}
