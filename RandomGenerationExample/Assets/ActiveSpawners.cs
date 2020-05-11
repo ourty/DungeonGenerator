@@ -10,13 +10,24 @@ public class ActiveSpawners : MonoBehaviour
     //this will also keep track of all existing rooms
     public int roomCount = 1;//this should be set to 1 by default as to account for the starting room
     public int maxRooms;
-
+    private void Start()
+    {
+        //right now max rooms must be at the minimum, 5.
+        if (maxRooms < 5)
+        {
+            maxRooms = 5;
+        }
+    }
     private void FixedUpdate()
     {
         if (spawnerList.Count != 0 && !spawning)
         {
             spawning = true;
             Invoke("InvokeSpawn", 0.1f);
+        }
+        if (spawnerList.Count == 0)
+        { //remove loading screen when done generating
+            Invoke("EndLoadingScreen", 0.2f);
         }
     }
 
@@ -28,10 +39,9 @@ public class ActiveSpawners : MonoBehaviour
             spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
         }
     }
-    // IEnumerator generate(float time){
-    //     rand = Random.Range(0, spawnerList.Count-1);
-    //     spawnerList[rand].GetComponent<roomSpawner>().Spawn();
-    //     yield return new WaitForSeconds(time+0.1f);
-    // }
+    void EndLoadingScreen()
+    {
+        EventManager.current.DoneLoading();
+    }
 }
 
