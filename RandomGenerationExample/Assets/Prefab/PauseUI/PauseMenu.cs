@@ -13,9 +13,9 @@ public class PauseMenu : MonoBehaviour
     void Start () 
     {
         //Pause button and HpBar is suppose to be not active when loading screen is shown
-        pausebutton.SetActive(false);
+        pausebutton.SetActive(true);
         pauseMenuUI.SetActive(false);
-        HpBar.SetActive(false);
+        HpBar.SetActive(true);
     }
     void Update()
     {
