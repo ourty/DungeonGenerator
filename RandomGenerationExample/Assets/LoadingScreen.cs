@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LoadingScreen : MonoBehaviour
 {
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -12,6 +13,7 @@ public class LoadingScreen : MonoBehaviour
     }
 
     void onFinishedLoading(){
+
         gameObject.SetActive(false);
     }
     void onBeginLoading(){

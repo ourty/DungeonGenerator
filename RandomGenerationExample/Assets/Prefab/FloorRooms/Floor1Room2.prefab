@@ -31,6 +31,7 @@ Transform:
   - {fileID: 1841322777375074025}
   - {fileID: 9163461269169394964}
   - {fileID: 5258803272196171009}
+  - {fileID: 914269599127794300}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,6 +81,61 @@ Transform:
   m_Father: {fileID: 5258803272196171009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5347240950209123150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 914269599127794300}
+  - component: {fileID: 7465371264284459588}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &914269599127794300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347240950209123150}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1042787365292788071}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7465371264284459588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347240950209123150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a4aca00567c4d87bc1050a41881c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerups:
+  - {fileID: 5454438412657574606, guid: 97f4a2b3a116741869598e8e1ff2fe12, type: 3}
+  - {fileID: 173006787798898930, guid: bdbb8b3739ded4cb2ab78a23995ef370, type: 3}
+  - {fileID: 7596793568077376350, guid: f3146f6ea36bb4063929a47e98b03735, type: 3}
+  - {fileID: 8212642885812820665, guid: b321e56602e9840e6803e1871e3c0f1f, type: 3}
+  - {fileID: 5455313879014628627, guid: 55398df70265240a8acda235c84b2594, type: 3}
+  - {fileID: 7030390715651537868, guid: 4dfec9ebf5e8047d5937b623d895d38f, type: 3}
+  - {fileID: 4264550011646573547, guid: f95f70dc02f0f4054a1a0180bd560255, type: 3}
+  Data: {fileID: 5681147906478007993}
+  SpawnLocation: {fileID: 914269599127794300}
+  Enemies: 0
+  isSpawned: 0
 --- !u!1 &6698997714713728086
 GameObject:
   m_ObjectHideFlags: 0

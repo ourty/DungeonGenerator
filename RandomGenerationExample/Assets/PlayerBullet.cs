@@ -9,8 +9,12 @@ public class PlayerBullet : MonoBehaviour
     public float distance;
     public GameObject destroyEffect;
     public int dmg = 10;
+    //public int lifesteal = 0;
+
     private void Start()
     {
+        //GameObject Player = GameObject.Find("Player");
+        //PlayerJoystick Hp = Player.GetComponent<PlayerJoystick>();
         Invoke("DestroyBullet", lifeTime);
     }
 
@@ -30,7 +34,9 @@ public class PlayerBullet : MonoBehaviour
             if (other.name == "Slime_R")
             {
                 other.GetComponent<SlimeEnemy>().TakeDmg(dmg);
+                
             }
+            //Hp.currentHealth += lifesteal;
             // other.GetComponent<Enemy>().TakeDmg(dmg);
             DestroyBullet();
         }

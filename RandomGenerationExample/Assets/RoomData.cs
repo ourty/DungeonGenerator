@@ -51,4 +51,9 @@ public class RoomData : MonoBehaviour
             currentRoom = true;
         }
     }
+
+    int Enemies()
+    {
+        return enemiesAlive;
+    }
 }

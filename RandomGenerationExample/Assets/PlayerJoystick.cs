@@ -22,7 +22,7 @@ public class PlayerJoystick : MonoBehaviour
     public PlayerBullet bullet;
     public AttackJoystick gun;
     public Transform holdSlot;
-    private Transform buddy;
+    //private Transform buddy;
     public HealthBar healthbar;
 
     private void Awake()
@@ -140,7 +140,7 @@ public class PlayerJoystick : MonoBehaviour
         {
             Debug.Log("SpedUp");
             Destroy(col.gameObject);
-            speed += 1f;
+            speed += 3f;
         }
         if (col.gameObject.tag == "PowerUp")
         {
@@ -152,7 +152,7 @@ public class PlayerJoystick : MonoBehaviour
         {
             Debug.Log("DoubleTap");
             Destroy(col.gameObject);
-            bullet.dmg += 10;
+            bullet.dmg += 5;
         }
         if (col.gameObject.tag == "OneUp")
         {
@@ -189,6 +189,15 @@ public class PlayerJoystick : MonoBehaviour
             currentHealth += 50;
             healthbar.SetHealth(currentHealth);
         }
+        if (col.gameObject.tag == "lifesword")
+        {
+            Debug.Log("lifesteal");
+            Destroy(col.gameObject);
+            //bullet.lifesteal += 5;
+            bullet.dmg += 10;
+            
+        }
+
 
     }
 }
