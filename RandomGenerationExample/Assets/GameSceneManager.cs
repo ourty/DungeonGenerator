@@ -18,6 +18,7 @@ public class GameSceneManager : MonoBehaviour
     {
         EventManager.current.onFloorGeneration += onProgressingFloor;
         EventManager.current.onGameRunStart += onInitialFloorGen;
+        EventManager.current.onGameRunEnd += onPlayerDeath;
         EventManager.current.GameRunStart();
 
     }
@@ -41,5 +42,8 @@ public class GameSceneManager : MonoBehaviour
         Instantiate(floorGenerationTools[2], game.transform); //Spawn Intial Room Folder for 1st Floor Spawns
         Instantiate(floorGenerationTools[1], miniMap.transform); //Spawn Initial PlayerNode
         Instantiate(floorGenerationTools[0], miniMap.transform); //spawn initial StartRoom on Minimap
+    }
+    void onPlayerDeath(){
+        gameObject.GetComponent<SceneLoading>().loadCharacterDeath();
     }
 }

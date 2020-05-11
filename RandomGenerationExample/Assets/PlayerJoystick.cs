@@ -59,6 +59,9 @@ public class PlayerJoystick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth <= 0){
+            EventManager.current.GameRunEnd();
+        }
         if (touchStart)
         {
             if(Input.touchCount > 0)
@@ -197,7 +200,6 @@ public class PlayerJoystick : MonoBehaviour
             bullet.dmg += 10;
             
         }
-
 
     }
 }

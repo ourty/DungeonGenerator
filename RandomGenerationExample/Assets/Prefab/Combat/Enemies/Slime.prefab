@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 7
+  dmg: 10
   stoppingDistance: 0
   retreatDistance: 0
   startTimeBtwShots: 0

@@ -6,12 +6,11 @@ public class SlimeEnemy : MonoBehaviour
 {
     public int health;
     public float speed;
+    public int dmg;
     public float stoppingDistance;
     public float retreatDistance;
-
     private float timeBtwShots;
     public float startTimeBtwShots;
-
     public GameObject projectile;
     public Transform player;
     public bool shoots;
@@ -108,6 +107,7 @@ public class SlimeEnemy : MonoBehaviour
         {
             Debug.Log("Is hurt");
             animator.SetTrigger("attack");
+            col.gameObject.GetComponent<PlayerJoystick>().TakeDmg(dmg);
         }
 
     }

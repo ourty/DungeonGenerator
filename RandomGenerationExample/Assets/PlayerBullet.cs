@@ -38,6 +38,10 @@ public class PlayerBullet : MonoBehaviour
             }
             //Hp.currentHealth += lifesteal;
             // other.GetComponent<Enemy>().TakeDmg(dmg);
+            if (other.name == "Slime_King")
+            {
+                other.GetComponent<SlimeKing>().TakeDmg(dmg);
+            }
             DestroyBullet();
         }
         if (other.CompareTag("Walls"))
