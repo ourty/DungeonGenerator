@@ -119,7 +119,7 @@ public class PlayerJoystick : MonoBehaviour
     {
         rb.velocity = new Vector2(direction.normalized.x, direction.normalized.y);
     }
-    void TakeDamage(int damage)
+    public void TakeDmg(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
@@ -130,13 +130,13 @@ public class PlayerJoystick : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Debug.Log("Is hurt");
-            TakeDamage(20);
+            TakeDmg(20);
         }
 
          if (col.gameObject.tag =="Projectile")
         {
             Debug.Log("Is hurt(Projectile");
-            TakeDamage(10);
+            TakeDmg(10);
         }
 
         if (col.gameObject.tag == "SpeedUp")
