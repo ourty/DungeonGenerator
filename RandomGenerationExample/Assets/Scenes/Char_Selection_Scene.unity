@@ -541,7 +541,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1174414801}
-        m_MethodName: loadGameStart
+        m_MethodName: loadCharacterIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -706,7 +706,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1394954447}
-        m_MethodName: loadGameStart
+        m_MethodName: loadCharacterIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -931,7 +931,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1473293845}
-        m_MethodName: loadGameStart
+        m_MethodName: loadCharacterIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1176,7 +1176,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1728895085}
-        m_MethodName: loadGameStart
+        m_MethodName: loadCharacterIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
