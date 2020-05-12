@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 public class SlimeKing : MonoBehaviour
 {
     public int health;
@@ -15,7 +15,7 @@ public class SlimeKing : MonoBehaviour
     public bool isFlipped = false;
     public GameObject slimeKingSplit;
     public GameObject healthBar;
-    //Slider slider;
+    Slider slider;
     public Transform shotpoint;
     bool isCreated = false;
     bool shooting = true;
@@ -27,7 +27,7 @@ public class SlimeKing : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //slider = Instantiate(healthBar, GameObject.Find("HealthBars").transform).GetComponent<Slider>();
+        slider = Instantiate(healthBar, GameObject.Find("HealthBars").transform).GetComponent<Slider>();
     }
 
 
@@ -49,7 +49,7 @@ public class SlimeKing : MonoBehaviour
                 timeBtwShots -= Time.deltaTime;
             }
         }
-        //slider.value = health;
+        slider.value = health;
 
         //boom boom effect
         if (health <= 0)
@@ -89,6 +89,7 @@ public class SlimeKing : MonoBehaviour
     }
     void DestroyBoss()
     {
+        Destroy(slider.gameObject);
         Destroy(gameObject);
     }
     public void OnCollisionEnter2D(Collision2D col)

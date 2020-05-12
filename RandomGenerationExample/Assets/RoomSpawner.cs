@@ -42,7 +42,6 @@ public class RoomSpawner : MonoBehaviour
             {
                 if (collidingList[i].CompareTag("SpawnPoint") || collidingList[i].CompareTag("ClosedPoint"))
                 {
-                    //StartCoroutine(absorbSpawners(hit, rand2));
                     if (collidingList[i].CompareTag("SpawnPoint"))
                     {
                         this.openingNeeded.AddRange(collidingList[i].GetComponent<RoomSpawner>().openingNeeded);
@@ -62,49 +61,58 @@ public class RoomSpawner : MonoBehaviour
         bool missingOpening;
         List<GameObject> tempRoomOptions;
         bool missingClosing;
+
+        foreach (GameObject room in templates.allRooms)
         {
-            foreach (GameObject room in templates.allRooms)
+            missingOpening = false;
+            foreach (char opening in openingNeeded)
             {
-                missingOpening = false;
-                foreach (char opening in openingNeeded)
-                {
-                    if (room.name.IndexOf(opening) == -1)
-                        missingOpening = true;
-                }
-                if (!missingOpening)
-                    roomOptions.Add(room);
+                if (room.name.IndexOf(opening) == -1)
+                    missingOpening = true;
             }
-            tempRoomOptions = new List<GameObject>(roomOptions);
-            foreach (GameObject room in tempRoomOptions)
+            if (!missingOpening)
+                roomOptions.Add(room);
+        }
+        tempRoomOptions = new List<GameObject>(roomOptions);
+        foreach (GameObject room in tempRoomOptions)
+        {
+            missingClosing = false;
+            foreach (char closing in closingNeeded)
             {
-                missingClosing = false;
-                foreach (char closing in closingNeeded)
-                {
-                    if (room.name.IndexOf(closing) != -1)
-                        missingClosing = true;
-                }
-                if (missingClosing)
-                    roomOptions.Remove(room);
+                if (room.name.IndexOf(closing) != -1)
+                    missingClosing = true;
             }
-            int potentialAndExistingRooms = activeSpawners.roomCount + activeSpawners.spawnerList.Count;
-            if ((activeSpawners.maxRooms - potentialAndExistingRooms) < 3)
+            if (missingClosing)
+                roomOptions.Remove(room);
+        }
+        int potentialAndExistingRooms = activeSpawners.roomCount + activeSpawners.spawnerList.Count;
+        if ((activeSpawners.maxRooms - potentialAndExistingRooms) < 3)
+        {
+            if (((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count) < 4) //this if statement may be extra and uneeded
             {
-                if (((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count) < 4) //this if statement may be extra and uneeded
+                tempRoomOptions = new List<GameObject>(roomOptions);
+                foreach (GameObject room in tempRoomOptions)
                 {
-                    tempRoomOptions = new List<GameObject>(roomOptions);
-                    foreach (GameObject room in tempRoomOptions)
-                    {
-                        string name = room.name;
-                        if (name.Length > ((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count))
-                            roomOptions.Remove(room);
-                    }
+                    string name = room.name;
+                    if (name.Length > ((activeSpawners.maxRooms - potentialAndExistingRooms) + openingNeeded.Count))
+                        roomOptions.Remove(room);
                 }
             }
-            rand1 = Random.Range(0, roomOptions.Count);
-            Instantiate(roomOptions[rand1], transform.position, roomOptions[rand1].transform.rotation, gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent);
+        }
+        if ((activeSpawners.maxRooms - potentialAndExistingRooms) == 1)
+        {
+            Instantiate(roomOptions[1], transform.position, transform.rotation, gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent);
             activeSpawners.roomCount++;
             spawned = true;
         }
+        else
+        {
+            rand1 = Random.Range(0, roomOptions.Count);
+            Instantiate(roomOptions[rand1], transform.position, transform.rotation, gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent);
+            activeSpawners.roomCount++;
+            spawned = true;
+        }
+
     }
     void OnTriggerEnter2D(Collider2D hit)
     {

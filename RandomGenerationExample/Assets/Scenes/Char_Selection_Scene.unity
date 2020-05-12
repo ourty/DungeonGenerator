@@ -530,7 +530,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174414802}
-        m_MethodName: playerPickedRaider
+        m_MethodName: SelectedRaider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -608,13 +608,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174414796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e30484db67fb147a7d4654e30d0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFloor: 0
-  game: {fileID: 0}
-  miniMap: {fileID: 0}
-  floorGenerationTools: []
 --- !u!1 &1394954442
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +695,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1394954448}
-        m_MethodName: playerPickedNinja
+        m_MethodName: SelectedNinja
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -777,13 +773,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394954442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e30484db67fb147a7d4654e30d0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFloor: 0
-  game: {fileID: 0}
-  miniMap: {fileID: 0}
-  floorGenerationTools: []
 --- !u!1 &1473293840
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +787,9 @@ GameObject:
   - component: {fileID: 1473293841}
   - component: {fileID: 1473293844}
   - component: {fileID: 1473293843}
-  - component: {fileID: 1473293842}
-  - component: {fileID: 1473293845}
   - component: {fileID: 1473293846}
+  - component: {fileID: 1473293845}
+  - component: {fileID: 1473293842}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -833,62 +825,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473293840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e30484db67fb147a7d4654e30d0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.8726415, b: 0.8726415, a: 1}
-    m_PressedColor: {r: 0.5849056, g: 0.5380028, b: 0.5380028, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1473293843}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1473293846}
-        m_MethodName: playerPickedAdventurer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1473293845}
-        m_MethodName: loadGameStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1473293843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,13 +885,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473293840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFloor: 0
-  game: {fileID: 0}
-  miniMap: {fileID: 0}
-  floorGenerationTools: []
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1473293843}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1473293842}
+        m_MethodName: SelectedAdventurer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 1473293845}
+        m_MethodName: loadGameStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1476756253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,56 +1045,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1532035056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1532035058}
-  - component: {fileID: 1532035057}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1532035057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532035056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentFloor: 0
-  game: {fileID: 0}
-  miniMap: {fileID: 0}
-  floorGenerationTools:
-  - {fileID: 4697857436416216087, guid: 59bc2c0649cb54e46bc8e9dcd5b0aa36, type: 3}
-  - {fileID: 8557178281680152388, guid: 96055c4b63ac84b47808aa67e0c34df0, type: 3}
-  - {fileID: 1521555755974633378, guid: aadb2caf8d8d9304eb0abc332deca607, type: 3}
---- !u!4 &1532035058
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532035056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540793848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,8 +1093,8 @@ GameObject:
   - component: {fileID: 1728895084}
   - component: {fileID: 1728895083}
   - component: {fileID: 1728895082}
-  - component: {fileID: 1728895085}
   - component: {fileID: 1728895086}
+  - component: {fileID: 1728895085}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1227,7 +1165,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1728895086}
-        m_MethodName: playerPickedSwindler
+        m_MethodName: SelectedSwindler
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1305,13 +1243,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728895080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34122b5b189882a4c87d037390e7e990, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e30484db67fb147a7d4654e30d0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFloor: 0
-  game: {fileID: 0}
-  miniMap: {fileID: 0}
-  floorGenerationTools: []
 --- !u!1 &1780513085
 GameObject:
   m_ObjectHideFlags: 0

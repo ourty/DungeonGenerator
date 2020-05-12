@@ -22,18 +22,18 @@ public class GameSceneManager : MonoBehaviour
         EventManager.current.GameRunStart();
 
     }
-    public void playerPickedAdventurer(){
-        playerCharacter = 1;
-    }
-    public void playerPickedRaider(){
-        playerCharacter = 2;
-    }
-    public void playerPickedNinja(){
-        playerCharacter = 3;
-    }
-    public void playerPickedSwindler(){
-        playerCharacter = 4;
-    }
+    // public void playerPickedAdventurer(){
+    //     playerCharacter = 1;
+    // }
+    // public void playerPickedRaider(){
+    //     playerCharacter = 2;
+    // }
+    // public void playerPickedNinja(){
+    //     playerCharacter = 3;
+    // }
+    // public void playerPickedSwindler(){
+    //     playerCharacter = 4;
+    // }
     void onProgressingFloor()
     {
         currentFloor++;

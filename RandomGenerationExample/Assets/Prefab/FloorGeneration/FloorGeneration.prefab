@@ -1547,7 +1547,7 @@ MonoBehaviour:
   spawnerList: []
   spawning: 0
   roomCount: 1
-  maxRooms: 10
+  maxRooms: 8
 --- !u!1 &4707781772898422654
 GameObject:
   m_ObjectHideFlags: 0

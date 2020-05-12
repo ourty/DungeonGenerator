@@ -33,10 +33,18 @@ public class ActiveSpawners : MonoBehaviour
 
     void InvokeSpawn()
     {
-        if (spawnerList.Count != 0)
+        try
         {
-            rand = Random.Range(0, spawnerList.Count);
-            spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
+            if (spawnerList.Count != 0)
+            {
+                rand = Random.Range(0, spawnerList.Count);
+                spawnerList[rand].GetComponent<RoomSpawner>().Spawn();
+            }
+        }
+        catch (System.IndexOutOfRangeException ex)
+        {
+            Debug.Log("Wrong index for spawnerList used");
+            spawning = false;
         }
     }
     void EndLoadingScreen()

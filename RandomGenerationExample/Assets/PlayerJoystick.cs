@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerJoystick : MonoBehaviour
 {
     public Transform player;
-    public float health;
+    public int health;
     public float speed = 5.0f;
     public bool touchStart = false;
     public Vector2 pointA;
@@ -21,22 +21,22 @@ public class PlayerJoystick : MonoBehaviour
 
     private void Awake()
     {
-        if (GameSceneManager.playerCharacter == 1)
+        if (PlayerPrefs.GetInt("CharacterSelected") == 1)
         {
             animator = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Animator>();
             gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
         }
-        if (GameSceneManager.playerCharacter == 2)
+        if (PlayerPrefs.GetInt("CharacterSelected") == 2)
         {
             animator = gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Animator>();
             gameObject.transform.GetChild(0).transform.GetChild(1).gameObject.SetActive(true);
         }
-        if (GameSceneManager.playerCharacter == 3)
+        if (PlayerPrefs.GetInt("CharacterSelected") == 3)
         {
             animator = gameObject.transform.GetChild(0).transform.GetChild(2).GetComponent<Animator>();
             gameObject.transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(true);
         }
-        if (GameSceneManager.playerCharacter == 4)
+        if (PlayerPrefs.GetInt("CharacterSelected") == 4)
         {
             animator = gameObject.transform.GetChild(0).transform.GetChild(3).GetComponent<Animator>();
             gameObject.transform.GetChild(0).transform.GetChild(3).gameObject.SetActive(true);
