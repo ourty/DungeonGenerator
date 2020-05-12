@@ -16,7 +16,7 @@ public class AttackJoystick : MonoBehaviour
     public GameObject bullet;
     public Transform gunbarrel;
     //private Transform aimTransform;
-    public float timeBtwShots;
+    public float timeBtwShots = 0.5f;
     public float startTimeBtwShots;
     public Touch finger;
     public int fingerID;

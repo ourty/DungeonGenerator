@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerJoystick : MonoBehaviour
 {
     public Transform player;
-    public int health;
+    public int health = 100;
     public float speed = 5.0f;
     public bool touchStart = false;
     public Vector2 pointA;
@@ -18,6 +18,8 @@ public class PlayerJoystick : MonoBehaviour
     Vector2 direction = new Vector2(0f, 0f);
     public Touch finger;
     public int fingerID;
+    public AttackJoystick gun;
+    public PlayerBullet bullet;
 
     private void Awake()
     {
@@ -120,16 +122,21 @@ public class PlayerJoystick : MonoBehaviour
         {
             Debug.Log("SpedUp");
             Destroy(col.gameObject);
+            speed += 2f;
         }
         if (col.gameObject.tag == "PowerUp")
         {
             Debug.Log("AttackSpd");
             Destroy(col.gameObject);
+            gun.timeBtwShots /= .25f;
+
         }
         if (col.gameObject.tag == "DMGUp")
         {
             Debug.Log("DoubleTap");
             Destroy(col.gameObject);
+            bullet.dmg += 10;
+
         }
         if (col.gameObject.tag == "OneUp")
         {
@@ -141,16 +148,20 @@ public class PlayerJoystick : MonoBehaviour
         {
             Debug.Log("MaxHP increased");
             Destroy(col.gameObject);
+            health += 50;
         }
         if (col.gameObject.tag == "1stAid")
         {
             Debug.Log("Heal");
             Destroy(col.gameObject);
+            health += 25;
         }
         if (col.gameObject.tag == "lifesword")
         {
             Debug.Log("lifesteal");  
             Destroy(col.gameObject);
+            health += 20;
+            bullet.dmg += 20;
         }
 
     }
