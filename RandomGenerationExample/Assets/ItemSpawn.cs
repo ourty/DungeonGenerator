@@ -9,15 +9,16 @@ public class ItemSpawn : MonoBehaviour
     RoomData RData;
     public bool isSpawned = false;
 
-    // Update is called once per frame
-
+    private void Start() {
+        RData = transform.parent.GetComponent<RoomData>();
+    }
     void Update()
     {
         if (RData.enemiesAlive == 0)
         {
         	if (isSpawned == false)
         	{
-        	Instantiate(powerups[Random.Range(0,powerups.Length)]);
+        	Instantiate(powerups[Random.Range(0,powerups.Length)], transform.position, transform.rotation);
         	isSpawned = true;
         	}
         }

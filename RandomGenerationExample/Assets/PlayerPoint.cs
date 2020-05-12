@@ -43,7 +43,7 @@ public class PlayerPoint : MonoBehaviour
             RoomNodeData rnData = other.GetComponent<RoomNodeData>(); //keeps track of script info pulled
             if (!startRoomInstantiated)
             {
-                rnData.connectedRoom = Instantiate(templates.allRooms[0], new Vector3(0f, 0f, 0f), templates.allRooms[rand].transform.rotation, floorRoomParent) as GameObject;
+                rnData.connectedRoom = Instantiate(templates.allRooms[0], new Vector3(0f, 0f, 0f), templates.allRooms[0].transform.rotation, floorRoomParent) as GameObject;
                 rnData.roomInstatiated = true;
                 startRoomInstantiated = true;
                 rnData.connectedRoom.GetComponent<RoomData>().currentRoom = true;

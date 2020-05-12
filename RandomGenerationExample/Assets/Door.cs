@@ -11,7 +11,6 @@ public class Door : MonoBehaviour
     PlayerPoint playerPointData;
     GameObject[] tempFind;
     RoomData parentRD;
-    public Sprite[] sprites; //open = 0 closed = 1
     Animator animator;
     void Start()
     {
