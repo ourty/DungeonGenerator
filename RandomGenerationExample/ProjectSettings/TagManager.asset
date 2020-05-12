@@ -9,17 +9,6 @@ TagManager:
   - DataPoint
   - ClosedPoint
   - PlayerPoint
-  - RootObjects
-  - UIButtons
-  - Projectile
-  - Walls
-  - Enemy
-  - DMGUp
-  - SpeedUp
-  - OneUp
-  - MaxHp
-  - PowerUp
-  - 1stAid
   layers:
   - Default
   - TransparentFX

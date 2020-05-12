@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPoint : MonoBehaviour
 {
-    Transform floorRoomParent;
+    public Transform parent;
     int rand;
     GameObject[] tempFind;
     RoomTemplates templates;
@@ -22,13 +22,7 @@ public class PlayerPoint : MonoBehaviour
             if (template.name == "roomStructureTemplates")
                 templates = template.GetComponent<RoomTemplates>();
         }
-        //activeSpawners = GameObject.Find("/MiniMap/FloorGeneration(Clone)/StartRoom").GetComponent<ActiveSpawners>();
-        tempFind = GameObject.FindGameObjectsWithTag("RootObjects");
-        foreach (GameObject root in tempFind)
-        {
-            if (root.name == "Floor1Rooms(Clone)")
-                floorRoomParent = root.transform;
-        }
+        activeSpawners = GameObject.Find("/MiniMap/FloorGeneration/StartRoom").GetComponent<ActiveSpawners>();
     }
 
     // Update is called once per frame
@@ -43,22 +37,17 @@ public class PlayerPoint : MonoBehaviour
             RoomNodeData rnData = other.GetComponent<RoomNodeData>(); //keeps track of script info pulled
             if (!startRoomInstantiated)
             {
-                rnData.connectedRoom = Instantiate(templates.allRooms[0], new Vector3(0f, 0f, 0f), templates.allRooms[rand].transform.rotation, floorRoomParent) as GameObject;
+                rand = Random.Range(0, templates.allRooms.Length);
+                rnData.connectedRoom = Instantiate(templates.allRooms[rand], new Vector3(0f, 0f, 0f), templates.allRooms[rand].transform.rotation, parent) as GameObject;
                 rnData.roomInstatiated = true;
                 startRoomInstantiated = true;
-                rnData.connectedRoom.GetComponent<RoomData>().currentRoom = true;
             }
             else if (!rnData.roomInstatiated)
             {
                 rand = Random.Range(0, templates.allRooms.Length);
-                rnData.connectedRoom = Instantiate(templates.allRooms[rand], currPos, templates.allRooms[rand].transform.rotation, floorRoomParent) as GameObject;
+                rnData.connectedRoom = Instantiate(templates.allRooms[rand], currPos, templates.allRooms[rand].transform.rotation, parent) as GameObject;
                 rnData.roomInstatiated = true;
-                rnData.connectedRoom.GetComponent<RoomData>().currentRoom = true;
             }
-            onRoomEnter(rnData.connectedRoom);
         }
-    }
-    private void onRoomEnter(GameObject room){
-        EventManager.current.updateCurrentRoom(room);
     }
 }

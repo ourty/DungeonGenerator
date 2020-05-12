@@ -7,42 +7,19 @@ public class Door : MonoBehaviour
     public char exit;
     GameObject playerPoint;
     GameObject player;
-    GameObject gun;
     PlayerPoint playerPointData;
     GameObject[] tempFind;
-    RoomData parentRD;
-    public Sprite[] sprites; //open = 0 closed = 1
-    Animator animator;
     void Start()
     {
         playerPoint = GameObject.FindGameObjectWithTag("PlayerPoint");
         playerPointData = playerPoint.GetComponent<PlayerPoint>();
-        parentRD = transform.parent.transform.parent.GetComponent<RoomData>();
-        animator = GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D hit)
     {
         if (hit.CompareTag("Player"))
         {
             player = hit.gameObject;
-            gun = player.transform.GetChild(1).gameObject;
             MoveRooms();
-        }
-    }
-    private void Update()
-    {
-        if (parentRD.enemiesAlive > 0 && parentRD.currentRoom)
-        {
-            animator.SetBool("closeDoor",true);
-        }
-        else
-            animator.SetBool("closeDoor",false);
-
-        if(animator.GetBool("closeDoor")){
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else{
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;;
         }
     }
 
@@ -77,11 +54,6 @@ public class Door : MonoBehaviour
         player.SetActive(false);
         player.transform.SetPositionAndRotation(playerMove, Quaternion.identity);
         Camera.main.transform.Translate(move);
-        player.GetComponent<PlayerJoystick>().pointA += move;
-        gun.GetComponent<AttackJoystick>().pointB += move;
-        gun.GetComponent<AttackJoystick>().pointA += move;
-        player.GetComponent<PlayerJoystick>().pointB += move;
-
         player.SetActive(true);
     }
 }

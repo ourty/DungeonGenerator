@@ -7,11 +7,8 @@ public class RoomData : MonoBehaviour
     public char[] doorways;
     private GameObject[] tempFind;
     DoorTemplates doorTemplates;
-    public bool currentRoom = false;
-    public int enemiesAlive;
     void Start()
     {
-        EventManager.current.onUpdateCurrentRoom += updateCurrentRoom;
         tempFind = GameObject.FindGameObjectsWithTag("Templates");
         foreach (GameObject template in tempFind)
         {
@@ -19,10 +16,6 @@ public class RoomData : MonoBehaviour
                 doorTemplates = template.GetComponent<DoorTemplates>();
         }
     }
-    private void Update() {
-        enemiesAlive = transform.GetChild(2).transform.childCount;
-    }
-
     public void SpawnDoors()
     {
         foreach (char door in doorways)
@@ -44,16 +37,5 @@ public class RoomData : MonoBehaviour
                 Instantiate(doorTemplates.allDoors[3], gameObject.transform.GetChild(1).transform);
             }
         }
-    }
-    private void updateCurrentRoom(GameObject room){
-        currentRoom = false;
-        if(GameObject.ReferenceEquals(room,gameObject)){
-            currentRoom = true;
-        }
-    }
-
-    int Enemies()
-    {
-        return enemiesAlive;
     }
 }

@@ -2448,7 +2448,7 @@ GameObject:
   m_Layer: 8
   m_Name: roomData
   m_TagString: DataPoint
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2525,9 +2525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f81f764368a8fb48be8a397fef9ba85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomInstatiated: 0
-  connectedRoom: {fileID: 0}
-  Doors: 4200
+  Openings: 4200
 --- !u!1 &5688233102769946925
 GameObject:
   m_ObjectHideFlags: 0

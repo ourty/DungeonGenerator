@@ -13,16 +13,12 @@ public class SceneLoading : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void loadCharacterIntro()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void loadGameStart()
+    public void loadAuthScene()
     {
         SceneManager.LoadScene(3);
     }
-    public void loadCharacterDeath()
+    public void loadGameStart()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 }
