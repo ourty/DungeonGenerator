@@ -102,4 +102,56 @@ public class PlayerJoystick : MonoBehaviour
     public void TakeDmg(int dmg){
         health -= dmg;
     }
+        public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Is hurt");
+            TakeDmg(20);
+        }
+
+         if (col.gameObject.tag =="Projectile")
+        {
+            Debug.Log("Is hurt(Projectile");
+            TakeDmg(10);
+        }
+
+        if (col.gameObject.tag == "SpeedUp")
+        {
+            Debug.Log("SpedUp");
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "PowerUp")
+        {
+            Debug.Log("AttackSpd");
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "DMGUp")
+        {
+            Debug.Log("DoubleTap");
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "OneUp")
+        {
+            Debug.Log("SizeUp");
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "MaxHp")
+        {
+            Debug.Log("MaxHP increased");
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "1stAid")
+        {
+            Debug.Log("Heal");
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "lifesword")
+        {
+            Debug.Log("lifesteal");  
+            Destroy(col.gameObject);
+        }
+
+    }
 }
